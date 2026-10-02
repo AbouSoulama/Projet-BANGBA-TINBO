@@ -1,0 +1,394 @@
+{
+  "meta": {
+    "siteName": "BTIS",
+    "legalName": "Bangba Tinbo Intelligence et Stratégies",
+    "title": "Intelligence stratégique",
+    "description": "BTIS accompagne les investisseurs, institutions et partenaires dans l’identification, la structuration et la réalisation d’opportunités stratégiques au Burkina Faso.",
+    "homeTitle": "Intelligence stratégique",
+    "homeDescription": "BTIS accompagne les investisseurs, institutions et partenaires dans l’identification, la structuration et la réalisation d’opportunités stratégiques au Burkina Faso.",
+    "btisTitle": "À propos",
+    "btisDescription": "Une intelligence locale au service de décisions internationales.",
+    "expertisesTitle": "Expertises",
+    "expertisesDescription": "Des capacités conçues pour éclairer les décisions et accompagner l’action.",
+    "investTitle": "Investir au Burkina Faso",
+    "investDescription": "BTIS accompagne les investisseurs souhaitant comprendre, identifier et développer des opportunités stratégiques dans le secteur de l’éducation et de l’enseignement.",
+    "operationsTitle": "Nos opérations",
+    "operationsDescription": "Des opérations sélectionnées, et la confidentialité des missions qui ne peuvent pas être détaillées.",
+    "insightsTitle": "Insights",
+    "insightsDescription": "Notes de cadrage sur l’éducation, l’investissement et le Burkina Faso. Elles ne remplacent pas une étude sourcée.",
+    "contactTitle": "Contact",
+    "contactDescription": "Qualifier une demande d’investissement, de conseil, d’intelligence de marché ou de partenariat."
+  },
+  "nav": {
+    "home": "Accueil",
+    "btis": "BTIS",
+    "about": "À propos",
+    "approach": "Notre approche",
+    "expertise": "Expertises",
+    "invest": "Investir au Burkina Faso",
+    "investShort": "Investir",
+    "investEducation": "Éducation & enseignement",
+    "investOpportunities": "Opportunités",
+    "investMarket": "Marché & perspectives",
+    "operations": "Nos opérations",
+    "operationsShort": "Opérations",
+    "insights": "Insights",
+    "contact": "Contact",
+    "meeting": "Prendre rendez-vous",
+    "open": "Ouvrir le menu",
+    "close": "Fermer le menu",
+    "primary": "Navigation principale",
+    "breadcrumb": "Fil d’Ariane",
+    "skip": "Aller au contenu",
+    "notFoundTitle": "Page introuvable",
+    "notFoundText": "Cette page n’existe pas ou n’est plus disponible."
+  },
+  "footer": {
+    "tagline": "Intelligence et stratégies",
+    "rights": "Tous droits réservés.",
+    "eyebrow": "Échanger avec BTIS",
+    "title": "Construisons la prochaine étape de votre projet.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "language": "Langue",
+    "location": "Burkina Faso · Afrique de l’Ouest"
+  },
+  "ui": {
+    "previous": "Diapositive précédente",
+    "next": "Diapositive suivante",
+    "slide": "Aller à la diapositive",
+    "scroll": "Défiler",
+    "carousel": "Présentation de BTIS",
+    "email": "Email",
+    "phone": "Téléphone",
+    "discover": "Découvrir",
+    "readMore": "Lire la suite"
+  },
+  "home": {
+    "slides": [
+      {
+        "eyebrow": "Burkina Faso · Intelligence stratégique",
+        "title": "L’intelligence stratégique au service des investissements qui transforment l’Afrique.",
+        "text": "BTIS accompagne les investisseurs, institutions et partenaires dans l’identification, la structuration et la réalisation d’opportunités stratégiques au Burkina Faso.",
+        "primary": { "label": "Explorer les opportunités", "href": "/investir" },
+        "secondary": { "label": "Prendre rendez-vous", "href": "/contact#rendez-vous" }
+      },
+      {
+        "eyebrow": "Focus investissement",
+        "title": "Investir dans l’avenir de l’éducation au Burkina Faso.",
+        "text": "Une approche fondée sur l’analyse du marché, la compréhension du contexte local et la structuration des partenariats.",
+        "primary": { "label": "Découvrir les opportunités", "href": "/investir#opportunites" },
+        "secondary": { "label": "Prendre rendez-vous", "href": "/contact#rendez-vous" }
+      },
+      {
+        "eyebrow": "Notre méthode",
+        "title": "Comprendre. Décider. Structurer. Agir.",
+        "text": "Intelligence économique, conseil stratégique et accompagnement opérationnel pour transformer des opportunités complexes en décisions structurées.",
+        "primary": { "label": "Découvrir nos expertises", "href": "/expertises" },
+        "secondary": { "label": "Échanger avec BTIS", "href": "/contact" }
+      }
+    ],
+    "marquee": [
+      "Intelligence économique",
+      "Conseil stratégique",
+      "Investissement",
+      "Accompagnement des opérations",
+      "Éducation & enseignement",
+      "Burkina Faso"
+    ],
+    "positioningEyebrow": "Positionnement",
+    "expertiseEyebrow": "Nos expertises",
+    "focusEyebrow": "Focus investissement",
+    "whyEyebrow": "La différence BTIS",
+    "operationsEyebrow": "Opérations",
+    "insightsEyebrow": "Publications",
+    "finalEyebrow": "Prochaine étape",
+    "kicker": "Burkina Faso",
+    "title": "L’intelligence stratégique au service des investissements qui transforment l’Afrique.",
+    "subtitle": "BTIS accompagne les investisseurs, institutions et partenaires dans l’identification, la structuration et la réalisation d’opportunités stratégiques au Burkina Faso.",
+    "ctaPrimary": "Explorer les opportunités",
+    "ctaSecondary": "Prendre rendez-vous",
+    "positioningTitle": "Comprendre. Décider. Structurer. Agir.",
+    "positioningText": "BTIS combine intelligence économique, conseil stratégique et accompagnement opérationnel pour transformer des opportunités complexes en décisions structurées.",
+    "expertiseTitle": "Expertises",
+    "expertiseCta": "Découvrir nos expertises",
+    "expertiseItems": [
+      {
+        "title": "Intelligence économique",
+        "text": "Analyser les marchés, les acteurs, les risques et les dynamiques sectorielles.",
+        "href": "/expertises#intelligence-economique"
+      },
+      {
+        "title": "Conseil stratégique",
+        "text": "Éclairer les décisions et construire des stratégies adaptées aux réalités locales.",
+        "href": "/expertises#conseil-strategique"
+      },
+      {
+        "title": "Investissement",
+        "text": "Identifier et qualifier des opportunités à potentiel au Burkina Faso.",
+        "href": "/expertises#investissement"
+      },
+      {
+        "title": "Accompagnement des opérations",
+        "text": "Faciliter la structuration et l’exécution des projets avec les parties prenantes locales.",
+        "href": "/expertises#accompagnement"
+      }
+    ],
+    "focusTitle": "Investir dans l’avenir de l’éducation au Burkina Faso",
+    "focusText": "BTIS identifie et accompagne des opportunités dans l’éducation et l’enseignement, avec une approche fondée sur l’analyse du marché, la compréhension du contexte local et la structuration des partenariats.",
+    "focusAxes": [
+      {
+        "title": "Éducation",
+        "text": "Établissements, formation, enseignement supérieur et solutions éducatives."
+      },
+      {
+        "title": "Capital",
+        "text": "Identification et structuration d’opportunités adaptées aux investisseurs."
+      },
+      {
+        "title": "Impact",
+        "text": "Des investissements combinant potentiel économique et contribution au développement."
+      }
+    ],
+    "focusCta": "Découvrir les opportunités",
+    "whyTitle": "Pourquoi BTIS ?",
+    "whyItems": [
+      {
+        "title": "Intelligence locale",
+        "text": "Une compréhension approfondie des réalités du marché burkinabè."
+      },
+      {
+        "title": "Vision internationale",
+        "text": "Une approche conçue pour dialoguer avec investisseurs et institutions internationales."
+      },
+      {
+        "title": "Approche stratégique",
+        "text": "Des analyses orientées vers la décision et l’action."
+      },
+      {
+        "title": "Accompagnement opérationnel",
+        "text": "Une implication au-delà de la simple recommandation."
+      }
+    ],
+    "operationsTitle": "Nos opérations",
+    "operationsFallback": "Des opportunités sélectionnées. Une approche structurée.",
+    "operationsCta": "Découvrir le projet",
+    "operationsAll": "Voir les opérations",
+    "insightsTitle": "Insights",
+    "insightsCta": "Voir tous les insights",
+    "finalTitle": "Vous étudiez une opportunité au Burkina Faso ?",
+    "finalText": "Parlons de votre projet, de vos objectifs et des possibilités de collaboration.",
+    "finalCta": "Prendre rendez-vous"
+  },
+  "about": {
+    "kicker": "BTIS",
+    "title": "Une intelligence locale au service de décisions internationales.",
+    "intro": "BTIS — Bangba Tinbo Intelligence et Stratégies — met une intelligence locale au service d’investisseurs, d’institutions et de partenaires qui préparent une décision au Burkina Faso.",
+    "missionTitle": "Notre mission",
+    "mission": "Fournir aux investisseurs et partenaires une lecture stratégique du marché, des acteurs et des opportunités afin de faciliter des décisions mieux informées.",
+    "visionTitle": "Notre vision",
+    "vision": "Contribuer à faire émerger des investissements structurants au Burkina Faso et en Afrique, en créant des passerelles entre capitaux, expertise et opportunités locales.",
+    "principlesTitle": "Nos principes",
+    "principles": [
+      {
+        "title": "Rigueur",
+        "text": "Tenir l’analyse à ce qui peut être établi."
+      },
+      {
+        "title": "Intelligence",
+        "text": "Lire les acteurs, le marché et le contexte avant de conclure."
+      },
+      {
+        "title": "Confidentialité",
+        "text": "Protéger les missions qui ne peuvent pas être rendues publiques."
+      },
+      {
+        "title": "Impact",
+        "text": "Relier le potentiel économique et la contribution au développement."
+      }
+    ],
+    "approachTitle": "Notre approche",
+    "steps": [
+      { "title": "Analyser", "text": "Lire le marché, les acteurs et le contexte." },
+      { "title": "Qualifier", "text": "Distinguer ce qui mérite d’être poursuivi." },
+      { "title": "Structurer", "text": "Organiser l’opportunité et les conditions de sa réalisation." },
+      { "title": "Connecter", "text": "Mettre en relation les parties prenantes pertinentes." },
+      { "title": "Accompagner", "text": "Rester présent lorsque l’exécution commence." }
+    ],
+    "cta": "Échanger avec BTIS"
+  },
+  "expertises": {
+    "kicker": "Expertises",
+    "title": "Des capacités conçues pour éclairer les décisions et accompagner l’action.",
+    "items": [
+      {
+        "id": "intelligence-economique",
+        "index": "01",
+        "title": "Intelligence économique",
+        "points": [
+          "Analyse de marché",
+          "Veille stratégique",
+          "Analyse concurrentielle",
+          "Cartographie des acteurs",
+          "Identification des risques",
+          "Intelligence sectorielle"
+        ]
+      },
+      {
+        "id": "conseil-strategique",
+        "index": "02",
+        "title": "Conseil stratégique",
+        "points": [
+          "Stratégie d’entrée sur le marché",
+          "Développement stratégique",
+          "Études stratégiques",
+          "Partenariats",
+          "Analyse d’opportunités"
+        ]
+      },
+      {
+        "id": "investissement",
+        "index": "03",
+        "title": "Investissement",
+        "points": [
+          "Sourcing d’opportunités",
+          "Qualification",
+          "Analyse préliminaire",
+          "Mise en relation",
+          "Structuration stratégique"
+        ]
+      },
+      {
+        "id": "accompagnement",
+        "index": "04",
+        "title": "Accompagnement des opérations",
+        "points": [
+          "Coordination des parties prenantes",
+          "Recherche de partenaires",
+          "Accompagnement local",
+          "Facilitation des opérations",
+          "Suivi stratégique"
+        ]
+      }
+    ],
+    "ctaTitle": "Parlons de votre projet",
+    "cta": "Prendre rendez-vous"
+  },
+  "invest": {
+    "kicker": "Investir au Burkina Faso",
+    "title": "Le Burkina Faso comme terrain d’opportunités.",
+    "subtitle": "BTIS accompagne les investisseurs souhaitant comprendre, identifier et développer des opportunités stratégiques dans le secteur de l’éducation et de l’enseignement.",
+    "whyTitle": "Pourquoi l’éducation ?",
+    "whyText": "BTIS retient ces axes de lecture. Ils décrivent des champs de travail, pas des résultats mesurés.",
+    "themes": [
+      "Demande éducative",
+      "Besoins d’infrastructures",
+      "Formation professionnelle",
+      "Enseignement supérieur",
+      "Innovation éducative"
+    ],
+    "opportunitiesTitle": "Opportunités",
+    "opportunities": [
+      {
+        "title": "Établissements éducatifs",
+        "text": "Création, développement ou expansion."
+      },
+      {
+        "title": "Enseignement supérieur",
+        "text": "Universités, écoles spécialisées et formations professionnelles."
+      },
+      {
+        "title": "Formation professionnelle",
+        "text": "Compétences, employabilité et formation continue."
+      },
+      {
+        "title": "EdTech",
+        "text": "Technologies et solutions numériques éducatives."
+      },
+      {
+        "title": "Infrastructures",
+        "text": "Campus, centres de formation et infrastructures spécialisées."
+      }
+    ],
+    "marketTitle": "Marché & perspectives",
+    "marketText": "BTIS lit une opportunité à partir de son contexte, de ses acteurs et des conditions nécessaires à sa réalisation. Cette lecture précède toute décision. Elle ne tient pas lieu d’étude chiffrée : celle-ci n’est produite que dans le cadre d’une mission.",
+    "marketPoints": [
+      "Contexte local",
+      "Acteurs et parties prenantes",
+      "Conditions de réalisation",
+      "Partenariats possibles"
+    ],
+    "roleTitle": "Ce que fait BTIS",
+    "roleText": "Nous ne nous contentons pas d’identifier une opportunité. Nous travaillons à comprendre son contexte, ses parties prenantes et les conditions nécessaires à sa réalisation.",
+    "steps": [
+      "Identifier",
+      "Analyser",
+      "Qualifier",
+      "Structurer",
+      "Mettre en relation",
+      "Accompagner"
+    ],
+    "cta": "Recevoir les opportunités disponibles"
+  },
+  "operations": {
+    "kicker": "Nos opérations",
+    "title": "Une bibliothèque de crédibilité, tenue par la confidentialité.",
+    "intro": "Les opérations publiables seront présentées ici, avec leur contexte, l’intervention de BTIS et leur résultat. Aucune référence n’est ajoutée tant qu’elle ne peut pas être rendue publique.",
+    "empty": "Des opportunités sélectionnées. Une approche structurée.",
+    "confidential": "Certaines missions et opérations ne peuvent être publiquement détaillées pour des raisons de confidentialité.",
+    "sector": "Secteur",
+    "location": "Localisation",
+    "interventionType": "Type d’intervention",
+    "context": "Contexte",
+    "intervention": "Intervention BTIS",
+    "result": "Résultat / statut",
+    "view": "Voir le projet",
+    "discover": "Découvrir le projet",
+    "back": "Toutes les opérations"
+  },
+  "insights": {
+    "kicker": "Insights",
+    "title": "Des notes pour éclairer une décision.",
+    "intro": "Ces textes exposent la grille de lecture de BTIS. Ils ne sont pas des études de marché et n’avancent aucun chiffre.",
+    "all": "Tous",
+    "empty": "Aucun article dans cette catégorie.",
+    "read": "Lire la note",
+    "sources": "Sources",
+    "sourcesEmpty": "Aucune source externe n’est citée. Cette note ne se substitue pas à une étude documentée.",
+    "ctaTitle": "Échanger sur cette lecture",
+    "cta": "Prendre rendez-vous",
+    "back": "Tous les insights"
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Construisons la prochaine étape de votre projet.",
+    "intro": "Le formulaire sert à qualifier votre demande. Décrivez votre organisation, votre rôle et l’objet de l’échange.",
+    "lastName": "Nom",
+    "firstName": "Prénom",
+    "organization": "Organisation",
+    "role": "Fonction",
+    "email": "Email professionnel",
+    "country": "Pays",
+    "requestType": "Type de demande",
+    "requestPlaceholder": "Choisir",
+    "message": "Message",
+    "messagePlaceholder": "Décrivez brièvement votre projet ou votre besoin.",
+    "submit": "Envoyer la demande",
+    "sending": "Envoi en cours",
+    "meetingTitle": "Préférez-vous un échange direct ?",
+    "meetingText": "Aucun calendrier n’est affiché. Envoyez la demande : BTIS vous proposera un créneau par e-mail.",
+    "meetingCta": "Planifier un rendez-vous",
+    "directTitle": "Coordonnées",
+    "directText": "Pour un premier échange, vous pouvez aussi écrire ou appeler directement.",
+    "confidential": "Chaque demande est traitée de manière confidentielle.",
+    "formTitle": "Votre demande",
+    "success": "Votre demande a été envoyée. BTIS vous répondra à l’adresse indiquée.",
+    "successMeeting": "Votre demande de rendez-vous a été envoyée. BTIS vous proposera un créneau par e-mail.",
+    "errorUnconfigured": "L’envoi des demandes n’est pas configuré sur ce serveur.",
+    "errorSend": "L’envoi a échoué. Veuillez réessayer dans un instant.",
+    "errorInvalid": "Certains champs doivent être corrigés.",
+    "errorRequired": "Ce champ est requis.",
+    "errorEmail": "Indiquez un email valide.",
+    "errorShort": "Décrivez brièvement votre projet ou votre besoin."
+  }
+}

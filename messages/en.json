@@ -1,0 +1,394 @@
+{
+  "meta": {
+    "siteName": "BTIS",
+    "legalName": "Bangba Tinbo Intelligence et Stratégies",
+    "title": "Strategic intelligence",
+    "description": "BTIS supports investors, institutions and partners in identifying, structuring and executing strategic opportunities in Burkina Faso.",
+    "homeTitle": "Strategic intelligence",
+    "homeDescription": "BTIS supports investors, institutions and partners in identifying, structuring and executing strategic opportunities in Burkina Faso.",
+    "btisTitle": "About",
+    "btisDescription": "Local intelligence for international decisions.",
+    "expertisesTitle": "Expertise",
+    "expertisesDescription": "Capabilities designed to inform decisions and support action.",
+    "investTitle": "Investing in Burkina Faso",
+    "investDescription": "BTIS supports investors seeking to understand, identify and develop strategic opportunities in education.",
+    "operationsTitle": "Our operations",
+    "operationsDescription": "Selected operations, and confidentiality for mandates that cannot be described in public.",
+    "insightsTitle": "Insights",
+    "insightsDescription": "Framing notes on education, investment and Burkina Faso. They are not a substitute for sourced research.",
+    "contactTitle": "Contact",
+    "contactDescription": "Qualify a request for investment, advisory, market intelligence or partnership."
+  },
+  "nav": {
+    "home": "Home",
+    "btis": "BTIS",
+    "about": "About",
+    "approach": "Our approach",
+    "expertise": "Expertise",
+    "invest": "Investing in Burkina Faso",
+    "investShort": "Invest",
+    "investEducation": "Education",
+    "investOpportunities": "Opportunities",
+    "investMarket": "Market & outlook",
+    "operations": "Our operations",
+    "operationsShort": "Operations",
+    "insights": "Insights",
+    "contact": "Contact",
+    "meeting": "Schedule a meeting",
+    "open": "Open menu",
+    "close": "Close menu",
+    "primary": "Main navigation",
+    "breadcrumb": "Breadcrumb",
+    "skip": "Skip to content",
+    "notFoundTitle": "Page not found",
+    "notFoundText": "This page does not exist or is no longer available."
+  },
+  "footer": {
+    "tagline": "Intelligence et stratégies",
+    "rights": "All rights reserved.",
+    "eyebrow": "Speak with BTIS",
+    "title": "Let’s shape the next step of your project.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "language": "Language",
+    "location": "Burkina Faso · West Africa"
+  },
+  "ui": {
+    "previous": "Previous slide",
+    "next": "Next slide",
+    "slide": "Go to slide",
+    "scroll": "Scroll",
+    "carousel": "BTIS overview",
+    "email": "Email",
+    "phone": "Phone",
+    "discover": "Discover",
+    "readMore": "Read more"
+  },
+  "home": {
+    "slides": [
+      {
+        "eyebrow": "Burkina Faso · Strategic intelligence",
+        "title": "Strategic intelligence for investments shaping Africa's future.",
+        "text": "BTIS supports investors, institutions and partners in identifying, structuring and executing strategic opportunities in Burkina Faso.",
+        "primary": { "label": "Explore Opportunities", "href": "/investir" },
+        "secondary": { "label": "Schedule a Meeting", "href": "/contact#rendez-vous" }
+      },
+      {
+        "eyebrow": "Investment focus",
+        "title": "Investing in the future of education in Burkina Faso.",
+        "text": "An approach grounded in market analysis, an understanding of the local context and the structuring of partnerships.",
+        "primary": { "label": "Discover the opportunities", "href": "/investir#opportunites" },
+        "secondary": { "label": "Schedule a Meeting", "href": "/contact#rendez-vous" }
+      },
+      {
+        "eyebrow": "Our method",
+        "title": "Understand. Decide. Structure. Act.",
+        "text": "Economic intelligence, strategic advisory and operational support to turn complex opportunities into structured decisions.",
+        "primary": { "label": "Discover our expertise", "href": "/expertises" },
+        "secondary": { "label": "Speak with BTIS", "href": "/contact" }
+      }
+    ],
+    "marquee": [
+      "Economic intelligence",
+      "Strategic advisory",
+      "Investment",
+      "Operational support",
+      "Education",
+      "Burkina Faso"
+    ],
+    "positioningEyebrow": "Positioning",
+    "expertiseEyebrow": "Our expertise",
+    "focusEyebrow": "Investment focus",
+    "whyEyebrow": "The BTIS difference",
+    "operationsEyebrow": "Operations",
+    "insightsEyebrow": "Publications",
+    "finalEyebrow": "Next step",
+    "kicker": "Burkina Faso",
+    "title": "Strategic intelligence for investments shaping Africa's future.",
+    "subtitle": "BTIS supports investors, institutions and partners in identifying, structuring and executing strategic opportunities in Burkina Faso.",
+    "ctaPrimary": "Explore Opportunities",
+    "ctaSecondary": "Schedule a Meeting",
+    "positioningTitle": "Understand. Decide. Structure. Act.",
+    "positioningText": "BTIS combines economic intelligence, strategic advisory and operational support to turn complex opportunities into structured decisions.",
+    "expertiseTitle": "Expertise",
+    "expertiseCta": "Discover our expertise",
+    "expertiseItems": [
+      {
+        "title": "Economic intelligence",
+        "text": "Analyse markets, actors, risks and sector dynamics.",
+        "href": "/expertises#intelligence-economique"
+      },
+      {
+        "title": "Strategic advisory",
+        "text": "Inform decisions and build strategies suited to local realities.",
+        "href": "/expertises#conseil-strategique"
+      },
+      {
+        "title": "Investment",
+        "text": "Identify and qualify opportunities with potential in Burkina Faso.",
+        "href": "/expertises#investissement"
+      },
+      {
+        "title": "Operational support",
+        "text": "Help structure and execute projects with local stakeholders.",
+        "href": "/expertises#accompagnement"
+      }
+    ],
+    "focusTitle": "Investing in the future of education in Burkina Faso",
+    "focusText": "BTIS identifies and supports opportunities in education, through market analysis, an understanding of the local context and the structuring of partnerships.",
+    "focusAxes": [
+      {
+        "title": "Education",
+        "text": "Institutions, training, higher education and educational solutions."
+      },
+      {
+        "title": "Capital",
+        "text": "Identification and structuring of opportunities suited to investors."
+      },
+      {
+        "title": "Impact",
+        "text": "Investments that combine economic potential and a contribution to development."
+      }
+    ],
+    "focusCta": "Discover the opportunities",
+    "whyTitle": "Why BTIS?",
+    "whyItems": [
+      {
+        "title": "Local intelligence",
+        "text": "A close understanding of the realities of the Burkinabè market."
+      },
+      {
+        "title": "International outlook",
+        "text": "An approach built for dialogue with international investors and institutions."
+      },
+      {
+        "title": "Strategic approach",
+        "text": "Analysis oriented toward decision and action."
+      },
+      {
+        "title": "Operational support",
+        "text": "Involvement beyond the recommendation itself."
+      }
+    ],
+    "operationsTitle": "Our operations",
+    "operationsFallback": "Selected opportunities. A structured approach.",
+    "operationsCta": "Discover the project",
+    "operationsAll": "View operations",
+    "insightsTitle": "Insights",
+    "insightsCta": "View all insights",
+    "finalTitle": "Are you assessing an opportunity in Burkina Faso?",
+    "finalText": "Let’s talk about your project, your objectives and how we might work together.",
+    "finalCta": "Schedule a meeting"
+  },
+  "about": {
+    "kicker": "BTIS",
+    "title": "Local intelligence for international decisions.",
+    "intro": "BTIS — Bangba Tinbo Intelligence et Stratégies — places local intelligence at the service of investors, institutions and partners preparing a decision in Burkina Faso.",
+    "missionTitle": "Our mission",
+    "mission": "Give investors and partners a strategic reading of the market, its actors and its opportunities, so that decisions are better informed.",
+    "visionTitle": "Our vision",
+    "vision": "Help bring structuring investments to life in Burkina Faso and in Africa, by building bridges between capital, expertise and local opportunities.",
+    "principlesTitle": "Our principles",
+    "principles": [
+      {
+        "title": "Rigour",
+        "text": "Keep the analysis within what can actually be established."
+      },
+      {
+        "title": "Intelligence",
+        "text": "Read the actors, the market and the context before concluding."
+      },
+      {
+        "title": "Confidentiality",
+        "text": "Protect mandates that cannot be made public."
+      },
+      {
+        "title": "Impact",
+        "text": "Connect economic potential with a contribution to development."
+      }
+    ],
+    "approachTitle": "Our approach",
+    "steps": [
+      { "title": "Analyse", "text": "Read the market, the actors and the context." },
+      { "title": "Qualify", "text": "Distinguish what deserves to be pursued." },
+      { "title": "Structure", "text": "Organise the opportunity and the conditions for carrying it out." },
+      { "title": "Connect", "text": "Bring the relevant stakeholders together." },
+      { "title": "Support", "text": "Stay involved once execution begins." }
+    ],
+    "cta": "Speak with BTIS"
+  },
+  "expertises": {
+    "kicker": "Expertise",
+    "title": "Capabilities designed to inform decisions and support action.",
+    "items": [
+      {
+        "id": "intelligence-economique",
+        "index": "01",
+        "title": "Economic intelligence",
+        "points": [
+          "Market analysis",
+          "Strategic monitoring",
+          "Competitive analysis",
+          "Stakeholder mapping",
+          "Risk identification",
+          "Sector intelligence"
+        ]
+      },
+      {
+        "id": "conseil-strategique",
+        "index": "02",
+        "title": "Strategic advisory",
+        "points": [
+          "Market-entry strategy",
+          "Strategic development",
+          "Strategic studies",
+          "Partnerships",
+          "Opportunity analysis"
+        ]
+      },
+      {
+        "id": "investissement",
+        "index": "03",
+        "title": "Investment",
+        "points": [
+          "Opportunity sourcing",
+          "Qualification",
+          "Preliminary analysis",
+          "Introductions",
+          "Strategic structuring"
+        ]
+      },
+      {
+        "id": "accompagnement",
+        "index": "04",
+        "title": "Operational support",
+        "points": [
+          "Stakeholder coordination",
+          "Partner search",
+          "Local support",
+          "Facilitation of operations",
+          "Strategic monitoring"
+        ]
+      }
+    ],
+    "ctaTitle": "Let’s talk about your project",
+    "cta": "Schedule a meeting"
+  },
+  "invest": {
+    "kicker": "Investing in Burkina Faso",
+    "title": "Burkina Faso as a landscape of opportunity.",
+    "subtitle": "BTIS supports investors seeking to understand, identify and develop strategic opportunities in education.",
+    "whyTitle": "Why education?",
+    "whyText": "BTIS uses these as lines of inquiry. They describe fields of work, not measured findings.",
+    "themes": [
+      "Demand for education",
+      "Infrastructure needs",
+      "Vocational training",
+      "Higher education",
+      "Educational innovation"
+    ],
+    "opportunitiesTitle": "Opportunities",
+    "opportunities": [
+      {
+        "title": "Educational institutions",
+        "text": "Creation, development or expansion."
+      },
+      {
+        "title": "Higher education",
+        "text": "Universities, specialised schools and professional training."
+      },
+      {
+        "title": "Vocational training",
+        "text": "Skills, employability and continuing education."
+      },
+      {
+        "title": "EdTech",
+        "text": "Educational technologies and digital solutions."
+      },
+      {
+        "title": "Infrastructure",
+        "text": "Campuses, training centres and specialised infrastructure."
+      }
+    ],
+    "marketTitle": "Market & outlook",
+    "marketText": "BTIS reads an opportunity through its context, its actors and the conditions required to carry it out. That reading comes before any decision. It is not a quantified study: such a study is produced only within a mandate.",
+    "marketPoints": [
+      "Local context",
+      "Actors and stakeholders",
+      "Conditions for delivery",
+      "Possible partnerships"
+    ],
+    "roleTitle": "What BTIS does",
+    "roleText": "We do more than identify an opportunity. We work to understand its context, its stakeholders and the conditions required to carry it out.",
+    "steps": [
+      "Identify",
+      "Analyse",
+      "Qualify",
+      "Structure",
+      "Connect",
+      "Support"
+    ],
+    "cta": "Receive available opportunities"
+  },
+  "operations": {
+    "kicker": "Our operations",
+    "title": "A credibility library, held by confidentiality.",
+    "intro": "Publishable operations will appear here, with their context, BTIS’s role and their result. No reference is added until it can be made public.",
+    "empty": "Selected opportunities. A structured approach.",
+    "confidential": "Some mandates and operations cannot be described in public, for reasons of confidentiality.",
+    "sector": "Sector",
+    "location": "Location",
+    "interventionType": "Type of intervention",
+    "context": "Context",
+    "intervention": "BTIS intervention",
+    "result": "Result / status",
+    "view": "View the project",
+    "discover": "Discover the project",
+    "back": "All operations"
+  },
+  "insights": {
+    "kicker": "Insights",
+    "title": "Notes to inform a decision.",
+    "intro": "These texts set out how BTIS reads a situation. They are not market studies and they do not advance figures.",
+    "all": "All",
+    "empty": "No article in this category.",
+    "read": "Read the note",
+    "sources": "Sources",
+    "sourcesEmpty": "No external source is cited. This note is not a substitute for documented research.",
+    "ctaTitle": "Discuss this reading",
+    "cta": "Schedule a meeting",
+    "back": "All insights"
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Let’s shape the next step of your project.",
+    "intro": "The form is designed to qualify your request. Describe your organisation, your role and the purpose of the conversation.",
+    "lastName": "Last name",
+    "firstName": "First name",
+    "organization": "Organisation",
+    "role": "Role",
+    "email": "Professional email",
+    "country": "Country",
+    "requestType": "Request type",
+    "requestPlaceholder": "Select",
+    "message": "Message",
+    "messagePlaceholder": "Briefly describe your project or your need.",
+    "submit": "Send the request",
+    "sending": "Sending",
+    "meetingTitle": "Prefer a direct conversation?",
+    "meetingText": "No calendar is displayed. Send the request and BTIS will propose a time by email.",
+    "meetingCta": "Schedule a meeting",
+    "directTitle": "Contact details",
+    "directText": "For a first conversation, you can also write or call directly.",
+    "confidential": "Every request is handled confidentially.",
+    "formTitle": "Your request",
+    "success": "Your request has been sent. BTIS will reply to the address you provided.",
+    "successMeeting": "Your meeting request has been sent. BTIS will propose a time by email.",
+    "errorUnconfigured": "Request delivery is not configured on this server.",
+    "errorSend": "Delivery failed. Please try again in a moment.",
+    "errorInvalid": "Some fields need to be corrected.",
+    "errorRequired": "This field is required.",
+    "errorEmail": "Enter a valid email address.",
+    "errorShort": "Briefly describe your project or your need."
+  }
+}

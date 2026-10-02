@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BTIS
 
-## Getting Started
-
-First, run the development server:
+Site institutionnel bilingue (français / anglais) de Bangba Tinbo Intelligence et Stratégies.
 
 ```bash
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## MySQL (Hostinger / phpMyAdmin)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+La formule Hostinger n’offre pas PostgreSQL. Les demandes du formulaire sont enregistrées en MySQL.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Créez une base et un utilisateur dans phpMyAdmin / hPanel.
+2. Importez [`sql/schema.sql`](sql/schema.sql).
+3. Renseignez `.env.local` (en local) ou les variables d’environnement Node.js sur Hostinger :
 
-## Learn More
+```
+MYSQL_HOST=127.0.0.1
+MYSQL_PORT=3306
+MYSQL_USER=...
+MYSQL_PASSWORD=...
+MYSQL_DATABASE=...
+```
 
-To learn more about Next.js, take a look at the following resources:
+Depuis l’application hébergée, utiliser `127.0.0.1` (pas l’hôte distant `srv….hstgr.io`).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Email : bangbatinbo@gmail.com
+- Téléphone : +33 7 55 82 16 84
 
-## Deploy on Vercel
+Le formulaire enregistre la demande en MySQL. L’envoi SMTP est optionnel (`CONTACT_TO` par défaut : bangbatinbo@gmail.com).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Les articles vivent dans `content/insights`. Les opérations publiables vivent dans `content/operations`.
