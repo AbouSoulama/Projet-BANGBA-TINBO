@@ -59,8 +59,8 @@ export default async function InsightPage({
   return (
     <article className="bg-white">
       <div className="relative min-h-[52vh] overflow-hidden bg-navy-deep">
-        <Image src={insightCover(article.category)} alt="" fill priority className="object-cover opacity-60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/50 to-navy-deep/30" />
+        <Image src={insightCover(article.category)} alt="" fill priority sizes="100vw" className="object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-navy-deep/35 to-navy-deep/15" />
         <div className="relative mx-auto flex min-h-[52vh] max-w-3xl flex-col justify-end px-6 pt-36 pb-16 text-white">
           <Breadcrumbs
             tone="dark"
@@ -101,7 +101,7 @@ export default async function InsightPage({
         <section className="mt-12 bg-navy px-6 py-8 text-paper">
           <h2 className="font-display text-3xl text-white">{t("ctaTitle")}</h2>
           <div className="mt-6">
-            <ButtonLink href="/contact" variant="gold">
+            <ButtonLink href="/rendez-vous" variant="gold">
               {t("cta")}
             </ButtonLink>
           </div>

@@ -3,18 +3,25 @@
 import { useActionState, useState } from "react";
 import { useTranslations } from "next-intl";
 import { submitContact, type ContactState } from "@/lib/contact";
-import { REQUEST_TYPES, type RequestType } from "@/lib/site";
+import { MEETING_FORMATS, MEETING_PERIODS, REQUEST_TYPES, type MeetingFormat, type MeetingPeriod, type RequestType } from "@/lib/site";
+import { CalendarIcon, PhoneIcon, VideoIcon } from "./icons";
 
 const initialState: ContactState = { status: "idle" };
 
-export function ContactForm({
+const formatIcons = {
+  visio: VideoIcon,
+  phone: PhoneIcon,
+  "in-person": CalendarIcon,
+} as const;
+
+export function MeetingForm({
   locale,
   defaultType,
 }: {
   locale: string;
   defaultType?: RequestType;
 }) {
-  const t = useTranslations("contact");
+  const t = useTranslations("meeting");
   const [state, action, pending] = useActionState(submitContact, initialState);
   const [values, setValues] = useState({
     lastName: "",
@@ -25,6 +32,8 @@ export function ContactForm({
     country: "",
     requestType: defaultType ?? "",
     message: "",
+    format: "" as "" | MeetingFormat,
+    period: "" as "" | MeetingPeriod,
   });
 
   function update(field: keyof typeof values, value: string) {
@@ -41,10 +50,10 @@ export function ContactForm({
   return (
     <form action={action} className="space-y-8" noValidate>
       <input type="hidden" name="locale" value={locale} />
-      <input type="hidden" name="intent" value="message" />
+      <input type="hidden" name="intent" value="meeting" />
       <div className="absolute -left-[9999px] h-px w-px overflow-hidden" aria-hidden="true">
-        <label htmlFor="companyWebsite">Website</label>
-        <input id="companyWebsite" name="companyWebsite" type="text" tabIndex={-1} autoComplete="off" />
+        <label htmlFor="companyWebsiteMeeting">Website</label>
+        <input id="companyWebsiteMeeting" name="companyWebsite" type="text" tabIndex={-1} autoComplete="off" />
       </div>
 
       {state.status === "success" ? (
@@ -68,9 +77,64 @@ export function ContactForm({
         </p>
       ) : null}
 
+      <fieldset>
+        <legend className="mb-4 text-sm font-semibold text-navy">{t("format")}</legend>
+        <div className="grid gap-3 sm:grid-cols-3">
+          {MEETING_FORMATS.map((format) => {
+            const Icon = formatIcons[format];
+            const selected = values.format === format;
+            return (
+              <label
+                key={format}
+                className={`flex cursor-pointer flex-col gap-3 border px-4 py-5 transition-colors duration-300 ${
+                  selected ? "border-gold bg-gold/10" : "border-line hover:border-navy/40"
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="format"
+                  value={format}
+                  checked={selected}
+                  onChange={() => update("format", format)}
+                  className="sr-only"
+                />
+                <Icon className="h-5 w-5 text-gold-deep" />
+                <span className="text-sm font-semibold text-navy">{t(`formats.${format}`)}</span>
+              </label>
+            );
+          })}
+        </div>
+        {state.fieldErrors?.format ? <p className="mt-2 text-sm text-navy">{t("errorRequired")}</p> : null}
+      </fieldset>
+
+      <div>
+        <label htmlFor="period" className="mb-2 block text-sm font-semibold text-navy">
+          {t("period")}
+        </label>
+        <select
+          id="period"
+          name="period"
+          value={values.period}
+          onChange={(event) => update("period", event.target.value)}
+          required
+          aria-invalid={state.fieldErrors?.period ? true : undefined}
+          className="w-full border-0 border-b border-line bg-transparent px-0 py-3 text-ink outline-none transition-colors focus:border-gold"
+        >
+          <option value="" disabled>
+            {t("periodPlaceholder")}
+          </option>
+          {MEETING_PERIODS.map((period) => (
+            <option key={period} value={period}>
+              {t(`periods.${period}`)}
+            </option>
+          ))}
+        </select>
+        {state.fieldErrors?.period ? <p className="mt-2 text-sm text-navy">{t("errorRequired")}</p> : null}
+      </div>
+
       <div className="grid gap-5 sm:grid-cols-2">
         <Field
-          id="lastName"
+          id="meetingLastName"
           name="lastName"
           label={t("lastName")}
           autoComplete="family-name"
@@ -79,7 +143,7 @@ export function ContactForm({
           error={errorText(state.fieldErrors?.lastName)}
         />
         <Field
-          id="firstName"
+          id="meetingFirstName"
           name="firstName"
           label={t("firstName")}
           autoComplete="given-name"
@@ -88,7 +152,7 @@ export function ContactForm({
           error={errorText(state.fieldErrors?.firstName)}
         />
         <Field
-          id="organization"
+          id="meetingOrganization"
           name="organization"
           label={t("organization")}
           autoComplete="organization"
@@ -97,7 +161,7 @@ export function ContactForm({
           error={errorText(state.fieldErrors?.organization)}
         />
         <Field
-          id="role"
+          id="meetingRole"
           name="role"
           label={t("role")}
           autoComplete="organization-title"
@@ -106,7 +170,7 @@ export function ContactForm({
           error={errorText(state.fieldErrors?.role)}
         />
         <Field
-          id="email"
+          id="meetingEmail"
           name="email"
           type="email"
           label={t("email")}
@@ -116,7 +180,7 @@ export function ContactForm({
           error={errorText(state.fieldErrors?.email)}
         />
         <Field
-          id="country"
+          id="meetingCountry"
           name="country"
           label={t("country")}
           autoComplete="country-name"
@@ -127,11 +191,11 @@ export function ContactForm({
       </div>
 
       <div>
-        <label htmlFor="requestType" className="mb-2 block text-sm font-semibold text-navy">
+        <label htmlFor="meetingRequestType" className="mb-2 block text-sm font-semibold text-navy">
           {t("requestType")}
         </label>
         <select
-          id="requestType"
+          id="meetingRequestType"
           name="requestType"
           value={values.requestType}
           onChange={(event) => update("requestType", event.target.value)}
@@ -148,23 +212,21 @@ export function ContactForm({
             </option>
           ))}
         </select>
-        {state.fieldErrors?.requestType ? (
-          <p className="mt-2 text-sm text-navy">{t("errorRequired")}</p>
-        ) : null}
+        {state.fieldErrors?.requestType ? <p className="mt-2 text-sm text-navy">{t("errorRequired")}</p> : null}
       </div>
 
       <div>
-        <label htmlFor="message" className="mb-2 block text-sm font-semibold text-navy">
-          {t("message")}
+        <label htmlFor="meetingMessage" className="mb-2 block text-sm font-semibold text-navy">
+          {t("objective")}
         </label>
         <textarea
-          id="message"
+          id="meetingMessage"
           name="message"
           required
-          rows={6}
+          rows={5}
           value={values.message}
           onChange={(event) => update("message", event.target.value)}
-          placeholder={t("messagePlaceholder")}
+          placeholder={t("objectivePlaceholder")}
           aria-invalid={state.fieldErrors?.message ? true : undefined}
           className="w-full border-0 border-b border-line bg-transparent px-0 py-3 text-ink outline-none transition-colors focus:border-gold"
         />
@@ -176,7 +238,7 @@ export function ContactForm({
       <button
         type="submit"
         disabled={pending}
-        className="bg-navy px-7 py-4 text-sm font-semibold tracking-[0.12em] text-white uppercase transition-colors duration-500 hover:bg-navy-deep disabled:opacity-60"
+        className="bg-gold px-7 py-4 text-sm font-semibold tracking-[0.12em] text-navy-deep uppercase transition-colors duration-500 hover:bg-gold-light disabled:opacity-60"
       >
         {pending ? t("sending") : t("submit")}
       </button>

@@ -17,7 +17,15 @@
     "insightsTitle": "Insights",
     "insightsDescription": "Notes de cadrage sur l’éducation, l’investissement et le Burkina Faso. Elles ne remplacent pas une étude sourcée.",
     "contactTitle": "Contact",
-    "contactDescription": "Qualifier une demande d’investissement, de conseil, d’intelligence de marché ou de partenariat."
+    "contactDescription": "Écrire à BTIS pour une demande d’investissement, de conseil, d’intelligence de marché ou de partenariat.",
+    "meetingTitle": "Prendre rendez-vous",
+    "meetingDescription": "Demander un échange. BTIS vous proposera un créneau par e-mail. Aucun calendrier n’est affiché.",
+    "partnersTitle": "Partenaires",
+    "partnersDescription": "BTIS collabore avec des institutions, des opérateurs et des acteurs locaux. Les partenariats ne sont nommés que lorsqu’ils peuvent être rendus publics.",
+    "becomePartnerTitle": "Devenir partenaire",
+    "becomePartnerDescription": "Présenter votre organisation et l’objet d’un partenariat avec BTIS.",
+    "becomeInvestorTitle": "Devenir investisseur",
+    "becomeInvestorDescription": "Qualifier un intérêt d’investissement au Burkina Faso, en particulier dans l’éducation."
   },
   "nav": {
     "home": "Accueil",
@@ -32,6 +40,9 @@
     "investMarket": "Marché & perspectives",
     "operations": "Nos opérations",
     "operationsShort": "Opérations",
+    "partners": "Partenaires",
+    "becomePartner": "Devenir partenaire",
+    "becomeInvestor": "Devenir investisseur",
     "insights": "Insights",
     "contact": "Contact",
     "meeting": "Prendre rendez-vous",
@@ -50,6 +61,11 @@
     "title": "Construisons la prochaine étape de votre projet.",
     "navigation": "Navigation",
     "contact": "Contact",
+    "contactText": "Écrire ou appeler pour une demande écrite.",
+    "contactCta": "Envoyer un message",
+    "meeting": "Rendez-vous",
+    "meetingText": "Un échange structuré. BTIS vous propose un créneau par e-mail.",
+    "meetingCta": "Prendre rendez-vous",
     "language": "Langue",
     "location": "Burkina Faso · Afrique de l’Ouest"
   },
@@ -71,14 +87,14 @@
         "title": "L’intelligence stratégique au service des investissements qui transforment l’Afrique.",
         "text": "BTIS accompagne les investisseurs, institutions et partenaires dans l’identification, la structuration et la réalisation d’opportunités stratégiques au Burkina Faso.",
         "primary": { "label": "Explorer les opportunités", "href": "/investir" },
-        "secondary": { "label": "Prendre rendez-vous", "href": "/contact#rendez-vous" }
+        "secondary": { "label": "Prendre rendez-vous", "href": "/rendez-vous" }
       },
       {
         "eyebrow": "Focus investissement",
         "title": "Investir dans l’avenir de l’éducation au Burkina Faso.",
         "text": "Une approche fondée sur l’analyse du marché, la compréhension du contexte local et la structuration des partenariats.",
         "primary": { "label": "Découvrir les opportunités", "href": "/investir#opportunites" },
-        "secondary": { "label": "Prendre rendez-vous", "href": "/contact#rendez-vous" }
+        "secondary": { "label": "Prendre rendez-vous", "href": "/rendez-vous" }
       },
       {
         "eyebrow": "Notre méthode",
@@ -100,6 +116,13 @@
     "expertiseEyebrow": "Nos expertises",
     "focusEyebrow": "Focus investissement",
     "whyEyebrow": "La différence BTIS",
+    "collaborateEyebrow": "Collaborer",
+    "collaborateTitle": "Partenaires et investisseurs.",
+    "collaborateText": "Deux parcours distincts : structurer une collaboration, ou qualifier un intérêt d’investissement.",
+    "collaboratePartner": "Devenir partenaire",
+    "collaboratePartnerText": "Institutions, opérateurs et acteurs locaux : proposer une collaboration.",
+    "collaborateInvestor": "Devenir investisseur",
+    "collaborateInvestorText": "Qualifier un intérêt d’investissement, en particulier dans l’éducation.",
     "operationsEyebrow": "Opérations",
     "insightsEyebrow": "Publications",
     "finalEyebrow": "Prochaine étape",
@@ -328,6 +351,7 @@
       "Mettre en relation",
       "Accompagner"
     ],
+    "ctaBecome": "Devenir investisseur",
     "cta": "Recevoir les opportunités disponibles"
   },
   "operations": {
@@ -361,8 +385,8 @@
   },
   "contact": {
     "kicker": "Contact",
-    "title": "Construisons la prochaine étape de votre projet.",
-    "intro": "Le formulaire sert à qualifier votre demande. Décrivez votre organisation, votre rôle et l’objet de l’échange.",
+    "title": "Écrivez-nous pour qualifier votre demande.",
+    "intro": "Ce formulaire sert à envoyer un message. Décrivez votre organisation, votre rôle et l’objet de votre demande. Pour un échange en visio ou par téléphone, utilisez la page rendez-vous.",
     "lastName": "Nom",
     "firstName": "Prénom",
     "organization": "Organisation",
@@ -373,22 +397,248 @@
     "requestPlaceholder": "Choisir",
     "message": "Message",
     "messagePlaceholder": "Décrivez brièvement votre projet ou votre besoin.",
-    "submit": "Envoyer la demande",
+    "submit": "Envoyer le message",
     "sending": "Envoi en cours",
-    "meetingTitle": "Préférez-vous un échange direct ?",
-    "meetingText": "Aucun calendrier n’est affiché. Envoyez la demande : BTIS vous proposera un créneau par e-mail.",
-    "meetingCta": "Planifier un rendez-vous",
+    "meetingKicker": "Échange direct",
+    "meetingTitle": "Vous préférez un rendez-vous ?",
+    "meetingText": "Format, période souhaitée et objet de l’échange : une page dédiée, distincte de ce formulaire.",
+    "meetingCta": "Prendre rendez-vous",
     "directTitle": "Coordonnées",
-    "directText": "Pour un premier échange, vous pouvez aussi écrire ou appeler directement.",
+    "directText": "Pour un premier échange écrit, vous pouvez aussi écrire ou appeler directement.",
     "confidential": "Chaque demande est traitée de manière confidentielle.",
-    "formTitle": "Votre demande",
-    "success": "Votre demande a été envoyée. BTIS vous répondra à l’adresse indiquée.",
-    "successMeeting": "Votre demande de rendez-vous a été envoyée. BTIS vous proposera un créneau par e-mail.",
+    "formTitle": "Votre message",
+    "success": "Votre message a été envoyé. BTIS vous répondra à l’adresse indiquée.",
     "errorUnconfigured": "L’envoi des demandes n’est pas configuré sur ce serveur.",
     "errorSend": "L’envoi a échoué. Veuillez réessayer dans un instant.",
     "errorInvalid": "Certains champs doivent être corrigés.",
     "errorRequired": "Ce champ est requis.",
     "errorEmail": "Indiquez un email valide.",
     "errorShort": "Décrivez brièvement votre projet ou votre besoin."
+  },
+  "meeting": {
+    "kicker": "Rendez-vous",
+    "title": "Planifier un échange avec BTIS.",
+    "intro": "Aucun calendrier n’est affiché. Indiquez le format et la période souhaités : BTIS vous proposera un créneau par e-mail.",
+    "formTitle": "Votre demande de rendez-vous",
+    "note": "Cette demande n’est pas un message général. Elle sert uniquement à organiser un échange.",
+    "steps": [
+      {
+        "title": "Vous précisez le cadre",
+        "text": "Format, période et objet de l’échange, pour que le rendez-vous soit utile dès la première minute."
+      },
+      {
+        "title": "BTIS propose un créneau",
+        "text": "Vous recevez une proposition par e-mail, adaptée à votre fuseau et à la nature de la demande."
+      },
+      {
+        "title": "L’échange a lieu",
+        "text": "Visio, téléphone ou présentiel à Ouagadougou, selon le format retenu."
+      }
+    ],
+    "format": "Format de l’échange",
+    "formats": {
+      "visio": "Visioconférence",
+      "phone": "Téléphone",
+      "in-person": "Présentiel · Ouagadougou"
+    },
+    "period": "Période souhaitée",
+    "periodPlaceholder": "Choisir une période",
+    "periods": {
+      "this-week": "Cette semaine",
+      "two-weeks": "Dans les deux semaines",
+      "month": "Dans le mois",
+      "flexible": "Flexible"
+    },
+    "lastName": "Nom",
+    "firstName": "Prénom",
+    "organization": "Organisation",
+    "role": "Fonction",
+    "email": "Email professionnel",
+    "country": "Pays",
+    "requestType": "Objet du rendez-vous",
+    "requestPlaceholder": "Choisir",
+    "objective": "Objectif de l’échange",
+    "objectivePlaceholder": "Que souhaitez-vous aborder lors de ce rendez-vous ?",
+    "submit": "Demander un rendez-vous",
+    "sending": "Envoi en cours",
+    "directTitle": "Comment cela se passe",
+    "directText": "Pas de créneau instantané. BTIS confirme le rendez-vous après lecture de votre demande.",
+    "writeKicker": "Simple message",
+    "writeText": "Si vous souhaitez seulement écrire, sans organiser d’échange, utilisez la page Contact.",
+    "writeCta": "Envoyer un message",
+    "success": "Votre demande de rendez-vous a été envoyée. BTIS vous proposera un créneau par e-mail.",
+    "errorUnconfigured": "L’envoi des demandes n’est pas configuré sur ce serveur.",
+    "errorSend": "L’envoi a échoué. Veuillez réessayer dans un instant.",
+    "errorInvalid": "Certains champs doivent être corrigés.",
+    "errorRequired": "Ce champ est requis.",
+    "errorEmail": "Indiquez un email valide.",
+    "errorShort": "Précisez l’objectif de l’échange."
+  },
+  "partners": {
+    "kicker": "Partenaires",
+    "title": "Des collaborations choisies, tenues par la confidentialité.",
+    "intro": "BTIS travaille avec des institutions, des opérateurs et des acteurs locaux lorsque l’alignement stratégique est réel. Aucun partenaire n’est nommé ici tant que la relation ne peut pas être rendue publique.",
+    "whyTitle": "Pourquoi un partenariat avec BTIS.",
+    "whyText": "Un partenariat n’est pas une vitrine. Il sert à éclairer une décision, à structurer une opération ou à relier des parties prenantes autour d’un projet au Burkina Faso, en particulier dans l’éducation et l’enseignement.",
+    "kindsTitle": "Avec qui BTIS collabore",
+    "kindsIntro": "Ces catégories décrivent des types d’acteurs. Elles ne constituent pas une liste de références.",
+    "kinds": [
+      {
+        "title": "Institutions",
+        "text": "Acteurs publics, diplomatiques ou de développement qui préparent une décision ou une intervention."
+      },
+      {
+        "title": "Opérateurs éducatifs",
+        "text": "Établissements, organismes de formation et porteurs de projets d’enseignement."
+      },
+      {
+        "title": "Investisseurs",
+        "text": "Investisseurs et co-investisseurs qui cherchent un ancrage local et une lecture du marché."
+      },
+      {
+        "title": "Acteurs locaux",
+        "text": "Parties prenantes burkinabè nécessaires à la compréhension du contexte et à l’exécution."
+      }
+    ],
+    "confidential": "Les noms, logos et mandats ne sont publiés que lorsqu’ils peuvent l’être. L’absence de liste n’est pas une absence de travail.",
+    "pointsTitle": "Ce qu’un partenariat engage",
+    "points": [
+      {
+        "title": "Un objet clair",
+        "text": "Intelligence, conseil, mise en relation ou accompagnement opérationnel — pas un partenariat de façade."
+      },
+      {
+        "title": "Une lecture locale",
+        "text": "BTIS apporte le contexte, les acteurs et les conditions de réalisation au Burkina Faso."
+      },
+      {
+        "title": "Une confidentialité assumée",
+        "text": "Certaines collaborations restent hors du site, par nature du mandat."
+      }
+    ],
+    "applyEyebrow": "Prochaine étape",
+    "applyTitle": "Vous souhaitez devenir partenaire ?",
+    "applyText": "Décrivez votre organisation et l’objet de la collaboration. BTIS revient vers vous après lecture de la demande.",
+    "applyCta": "Devenir partenaire",
+    "ctaTitle": "Un échange avant toute structuration.",
+    "cta": "Prendre rendez-vous",
+    "applyKicker": "Devenir partenaire",
+    "applyPageTitle": "Proposer un partenariat à BTIS.",
+    "applyPageIntro": "Ce formulaire sert à qualifier une collaboration. Il ne crée pas un partenariat automatique.",
+    "applySteps": [
+      {
+        "title": "Vous présentez le cadre",
+        "text": "Organisation, type d’acteur et objet du partenariat, pour juger de l’alignement."
+      },
+      {
+        "title": "BTIS évalue l’alignement",
+        "text": "La demande est lue au regard des expertises, du contexte burkinabè et de la confidentialité des mandats."
+      },
+      {
+        "title": "Un cadre est discuté",
+        "text": "Si l’intérêt est réciproque, BTIS propose les modalités d’une collaboration."
+      }
+    ],
+    "formTitle": "Votre proposition",
+    "formNote": "Chaque demande est traitée de manière confidentielle. Aucun logo n’est publié sans accord.",
+    "partnerKind": "Type d’acteur",
+    "partnerKinds": {
+      "institution": "Institution",
+      "operator": "Opérateur",
+      "education": "Acteur éducatif",
+      "investor": "Investisseur / co-investisseur",
+      "local": "Acteur local",
+      "other": "Autre"
+    },
+    "selectPlaceholder": "Choisir",
+    "lastName": "Nom",
+    "firstName": "Prénom",
+    "organization": "Organisation",
+    "role": "Fonction",
+    "email": "Email professionnel",
+    "country": "Pays",
+    "proposal": "Objet du partenariat",
+    "proposalPlaceholder": "Quel type de collaboration souhaitez-vous explorer avec BTIS ?",
+    "submit": "Envoyer la proposition",
+    "sending": "Envoi en cours",
+    "asideTitle": "Comment cela se passe",
+    "asideText": "BTIS ne publie pas d’appel d’offres ouvert. Chaque partenariat est examiné à partir de votre proposition.",
+    "investorKicker": "Investir",
+    "investorText": "Si vous cherchez à investir plutôt qu’à structurer un partenariat opérationnel, utilisez le parcours investisseur.",
+    "investorCta": "Devenir investisseur",
+    "success": "Votre proposition de partenariat a été envoyée. BTIS vous répondra à l’adresse indiquée.",
+    "errorUnconfigured": "L’envoi des demandes n’est pas configuré sur ce serveur.",
+    "errorSend": "L’envoi a échoué. Veuillez réessayer dans un instant.",
+    "errorInvalid": "Certains champs doivent être corrigés.",
+    "errorRequired": "Ce champ est requis.",
+    "errorEmail": "Indiquez un email valide.",
+    "errorShort": "Précisez l’objet du partenariat."
+  },
+  "joinInvestor": {
+    "kicker": "Devenir investisseur",
+    "title": "Qualifier un intérêt d’investissement avec BTIS.",
+    "intro": "Ce parcours n’est pas une souscription. Il sert à comprendre votre profil, votre intérêt et le type d’accompagnement attendu, avant toute mise en relation.",
+    "forTitle": "À qui s’adresse ce parcours",
+    "forText": "Aux investisseurs, family offices, fonds, institutions et entreprises qui veulent lire le Burkina Faso — en particulier l’éducation — avant de décider.",
+    "points": [
+      "Lecture du marché",
+      "Qualification d’opportunités",
+      "Structuration",
+      "Ancrage local"
+    ],
+    "marketCta": "Lire d’abord Investir au Burkina Faso",
+    "steps": [
+      {
+        "title": "Vous précisez votre profil",
+        "text": "Type d’investisseur et intérêt sectoriel, sans montant public ni engagement."
+      },
+      {
+        "title": "BTIS partage une lecture",
+        "text": "Contexte, acteurs et conditions de réalisation — pas une brochure chiffrée."
+      },
+      {
+        "title": "La suite se structure",
+        "text": "Si l’alignement est confirmé, BTIS accompagne la qualification, puis l’éventuelle mise en œuvre."
+      }
+    ],
+    "formTitle": "Votre intérêt d’investissement",
+    "formNote": "Aucun ticket minimum n’est publié. La qualification précède toute discussion d’opération.",
+    "investorProfile": "Profil d’investisseur",
+    "investorProfiles": {
+      "individual": "Personne physique",
+      "family-office": "Family office",
+      "fund": "Fonds",
+      "institution": "Institution",
+      "corporate": "Entreprise"
+    },
+    "interest": "Intérêt principal",
+    "interests": {
+      "education": "Éducation & enseignement",
+      "mixed": "Plusieurs secteurs, dont l’éducation",
+      "explore": "À préciser avec BTIS"
+    },
+    "selectPlaceholder": "Choisir",
+    "lastName": "Nom",
+    "firstName": "Prénom",
+    "organization": "Organisation",
+    "role": "Fonction",
+    "email": "Email professionnel",
+    "country": "Pays",
+    "proposal": "Votre intérêt",
+    "proposalPlaceholder": "Quel type d’investissement ou d’accompagnement souhaitez-vous explorer ?",
+    "submit": "Qualifier mon intérêt",
+    "sending": "Envoi en cours",
+    "asideTitle": "Ce que BTIS ne fait pas ici",
+    "asideText": "Pas de collecte de fonds en ligne, pas de promesse de rendement, pas de liste d’opérations confidentielles.",
+    "partnerKicker": "Partenariat",
+    "partnerText": "Si vous représentez un opérateur, une institution ou un acteur local, le parcours partenaire est plus adapté.",
+    "partnerCta": "Devenir partenaire",
+    "success": "Votre intérêt d’investissement a été envoyé. BTIS vous répondra à l’adresse indiquée.",
+    "errorUnconfigured": "L’envoi des demandes n’est pas configuré sur ce serveur.",
+    "errorSend": "L’envoi a échoué. Veuillez réessayer dans un instant.",
+    "errorInvalid": "Certains champs doivent être corrigés.",
+    "errorRequired": "Ce champ est requis.",
+    "errorEmail": "Indiquez un email valide.",
+    "errorShort": "Précisez votre intérêt."
   }
 }

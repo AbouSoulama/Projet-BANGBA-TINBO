@@ -17,7 +17,15 @@
     "insightsTitle": "Insights",
     "insightsDescription": "Framing notes on education, investment and Burkina Faso. They are not a substitute for sourced research.",
     "contactTitle": "Contact",
-    "contactDescription": "Qualify a request for investment, advisory, market intelligence or partnership."
+    "contactDescription": "Write to BTIS about an investment, advisory, market intelligence or partnership request.",
+    "meetingTitle": "Schedule a meeting",
+    "meetingDescription": "Request a conversation. BTIS will propose a time by email. No calendar is displayed.",
+    "partnersTitle": "Partners",
+    "partnersDescription": "BTIS works with institutions, operators and local actors. Partnerships are named only when they can be made public.",
+    "becomePartnerTitle": "Become a partner",
+    "becomePartnerDescription": "Present your organisation and the purpose of a partnership with BTIS.",
+    "becomeInvestorTitle": "Become an investor",
+    "becomeInvestorDescription": "Qualify an investment interest in Burkina Faso, particularly in education."
   },
   "nav": {
     "home": "Home",
@@ -32,6 +40,9 @@
     "investMarket": "Market & outlook",
     "operations": "Our operations",
     "operationsShort": "Operations",
+    "partners": "Partners",
+    "becomePartner": "Become a partner",
+    "becomeInvestor": "Become an investor",
     "insights": "Insights",
     "contact": "Contact",
     "meeting": "Schedule a meeting",
@@ -50,6 +61,11 @@
     "title": "Let’s shape the next step of your project.",
     "navigation": "Navigation",
     "contact": "Contact",
+    "contactText": "Write or call for a written request.",
+    "contactCta": "Send a message",
+    "meeting": "Meeting",
+    "meetingText": "A structured conversation. BTIS proposes a time by email.",
+    "meetingCta": "Schedule a meeting",
     "language": "Language",
     "location": "Burkina Faso · West Africa"
   },
@@ -71,14 +87,14 @@
         "title": "Strategic intelligence for investments shaping Africa's future.",
         "text": "BTIS supports investors, institutions and partners in identifying, structuring and executing strategic opportunities in Burkina Faso.",
         "primary": { "label": "Explore Opportunities", "href": "/investir" },
-        "secondary": { "label": "Schedule a Meeting", "href": "/contact#rendez-vous" }
+        "secondary": { "label": "Schedule a Meeting", "href": "/rendez-vous" }
       },
       {
         "eyebrow": "Investment focus",
         "title": "Investing in the future of education in Burkina Faso.",
         "text": "An approach grounded in market analysis, an understanding of the local context and the structuring of partnerships.",
         "primary": { "label": "Discover the opportunities", "href": "/investir#opportunites" },
-        "secondary": { "label": "Schedule a Meeting", "href": "/contact#rendez-vous" }
+        "secondary": { "label": "Schedule a Meeting", "href": "/rendez-vous" }
       },
       {
         "eyebrow": "Our method",
@@ -100,6 +116,13 @@
     "expertiseEyebrow": "Our expertise",
     "focusEyebrow": "Investment focus",
     "whyEyebrow": "The BTIS difference",
+    "collaborateEyebrow": "Work with BTIS",
+    "collaborateTitle": "Partners and investors.",
+    "collaborateText": "Two distinct paths: structure a collaboration, or qualify an investment interest.",
+    "collaboratePartner": "Become a partner",
+    "collaboratePartnerText": "Institutions, operators and local actors: propose a collaboration.",
+    "collaborateInvestor": "Become an investor",
+    "collaborateInvestorText": "Qualify an investment interest, particularly in education.",
     "operationsEyebrow": "Operations",
     "insightsEyebrow": "Publications",
     "finalEyebrow": "Next step",
@@ -328,6 +351,7 @@
       "Connect",
       "Support"
     ],
+    "ctaBecome": "Become an investor",
     "cta": "Receive available opportunities"
   },
   "operations": {
@@ -361,8 +385,8 @@
   },
   "contact": {
     "kicker": "Contact",
-    "title": "Let’s shape the next step of your project.",
-    "intro": "The form is designed to qualify your request. Describe your organisation, your role and the purpose of the conversation.",
+    "title": "Write to us to qualify your request.",
+    "intro": "This form is for sending a message. Describe your organisation, your role and the purpose of your request. For a video or phone conversation, use the meeting page.",
     "lastName": "Last name",
     "firstName": "First name",
     "organization": "Organisation",
@@ -373,22 +397,248 @@
     "requestPlaceholder": "Select",
     "message": "Message",
     "messagePlaceholder": "Briefly describe your project or your need.",
-    "submit": "Send the request",
+    "submit": "Send the message",
     "sending": "Sending",
-    "meetingTitle": "Prefer a direct conversation?",
-    "meetingText": "No calendar is displayed. Send the request and BTIS will propose a time by email.",
+    "meetingKicker": "Direct conversation",
+    "meetingTitle": "Would you rather schedule a meeting?",
+    "meetingText": "Format, preferred period and purpose of the conversation: a dedicated page, separate from this form.",
     "meetingCta": "Schedule a meeting",
     "directTitle": "Contact details",
-    "directText": "For a first conversation, you can also write or call directly.",
+    "directText": "For a first written exchange, you can also write or call directly.",
     "confidential": "Every request is handled confidentially.",
-    "formTitle": "Your request",
-    "success": "Your request has been sent. BTIS will reply to the address you provided.",
-    "successMeeting": "Your meeting request has been sent. BTIS will propose a time by email.",
+    "formTitle": "Your message",
+    "success": "Your message has been sent. BTIS will reply to the address you provided.",
     "errorUnconfigured": "Request delivery is not configured on this server.",
     "errorSend": "Delivery failed. Please try again in a moment.",
     "errorInvalid": "Some fields need to be corrected.",
     "errorRequired": "This field is required.",
     "errorEmail": "Enter a valid email address.",
     "errorShort": "Briefly describe your project or your need."
+  },
+  "meeting": {
+    "kicker": "Meeting",
+    "title": "Schedule a conversation with BTIS.",
+    "intro": "No calendar is displayed. Indicate the format and preferred period: BTIS will propose a time by email.",
+    "formTitle": "Your meeting request",
+    "note": "This is not a general message. It is only used to organise a conversation.",
+    "steps": [
+      {
+        "title": "You set the frame",
+        "text": "Format, period and purpose of the conversation, so the meeting is useful from the first minute."
+      },
+      {
+        "title": "BTIS proposes a time",
+        "text": "You receive a proposal by email, adapted to your time zone and the nature of the request."
+      },
+      {
+        "title": "The conversation takes place",
+        "text": "Video, phone or in person in Ouagadougou, according to the format selected."
+      }
+    ],
+    "format": "Meeting format",
+    "formats": {
+      "visio": "Video call",
+      "phone": "Phone",
+      "in-person": "In person · Ouagadougou"
+    },
+    "period": "Preferred period",
+    "periodPlaceholder": "Select a period",
+    "periods": {
+      "this-week": "This week",
+      "two-weeks": "Within two weeks",
+      "month": "This month",
+      "flexible": "Flexible"
+    },
+    "lastName": "Last name",
+    "firstName": "First name",
+    "organization": "Organisation",
+    "role": "Role",
+    "email": "Professional email",
+    "country": "Country",
+    "requestType": "Purpose of the meeting",
+    "requestPlaceholder": "Select",
+    "objective": "Objective of the conversation",
+    "objectivePlaceholder": "What would you like to discuss in this meeting?",
+    "submit": "Request a meeting",
+    "sending": "Sending",
+    "directTitle": "How it works",
+    "directText": "No instant slot. BTIS confirms the meeting after reading your request.",
+    "writeKicker": "A simple message",
+    "writeText": "If you only want to write, without organising a conversation, use the Contact page.",
+    "writeCta": "Send a message",
+    "success": "Your meeting request has been sent. BTIS will propose a time by email.",
+    "errorUnconfigured": "Request delivery is not configured on this server.",
+    "errorSend": "Delivery failed. Please try again in a moment.",
+    "errorInvalid": "Some fields need to be corrected.",
+    "errorRequired": "This field is required.",
+    "errorEmail": "Enter a valid email address.",
+    "errorShort": "Please specify the objective of the conversation."
+  },
+  "partners": {
+    "kicker": "Partners",
+    "title": "Selected collaborations, held by confidentiality.",
+    "intro": "BTIS works with institutions, operators and local actors when the strategic fit is real. No partner is named here until the relationship can be made public.",
+    "whyTitle": "Why partner with BTIS.",
+    "whyText": "A partnership is not a showcase. It serves to inform a decision, structure an operation or connect stakeholders around a project in Burkina Faso, particularly in education.",
+    "kindsTitle": "Who BTIS works with",
+    "kindsIntro": "These categories describe types of actors. They are not a list of references.",
+    "kinds": [
+      {
+        "title": "Institutions",
+        "text": "Public, diplomatic or development actors preparing a decision or an intervention."
+      },
+      {
+        "title": "Education operators",
+        "text": "Schools, training organisations and education project holders."
+      },
+      {
+        "title": "Investors",
+        "text": "Investors and co-investors seeking local grounding and a reading of the market."
+      },
+      {
+        "title": "Local actors",
+        "text": "Burkinabè stakeholders needed to understand the context and to execute."
+      }
+    ],
+    "confidential": "Names, logos and mandates are published only when they can be. The absence of a list is not an absence of work.",
+    "pointsTitle": "What a partnership involves",
+    "points": [
+      {
+        "title": "A clear purpose",
+        "text": "Intelligence, advisory, introductions or operational support — not a partnership for display."
+      },
+      {
+        "title": "A local reading",
+        "text": "BTIS brings the context, the actors and the conditions required to operate in Burkina Faso."
+      },
+      {
+        "title": "Assumed confidentiality",
+        "text": "Some collaborations remain off the site, by the nature of the mandate."
+      }
+    ],
+    "applyEyebrow": "Next step",
+    "applyTitle": "Would you like to become a partner?",
+    "applyText": "Describe your organisation and the purpose of the collaboration. BTIS will reply after reading the request.",
+    "applyCta": "Become a partner",
+    "ctaTitle": "A conversation before any structuring.",
+    "cta": "Schedule a meeting",
+    "applyKicker": "Become a partner",
+    "applyPageTitle": "Propose a partnership to BTIS.",
+    "applyPageIntro": "This form is used to qualify a collaboration. It does not create a partnership automatically.",
+    "applySteps": [
+      {
+        "title": "You set the frame",
+        "text": "Organisation, type of actor and purpose of the partnership, to assess the fit."
+      },
+      {
+        "title": "BTIS assesses the fit",
+        "text": "The request is read against our expertise, the Burkinabè context and the confidentiality of mandates."
+      },
+      {
+        "title": "A framework is discussed",
+        "text": "If interest is mutual, BTIS proposes how a collaboration could work."
+      }
+    ],
+    "formTitle": "Your proposal",
+    "formNote": "Every request is handled confidentially. No logo is published without agreement.",
+    "partnerKind": "Type of actor",
+    "partnerKinds": {
+      "institution": "Institution",
+      "operator": "Operator",
+      "education": "Education actor",
+      "investor": "Investor / co-investor",
+      "local": "Local actor",
+      "other": "Other"
+    },
+    "selectPlaceholder": "Select",
+    "lastName": "Last name",
+    "firstName": "First name",
+    "organization": "Organisation",
+    "role": "Role",
+    "email": "Professional email",
+    "country": "Country",
+    "proposal": "Purpose of the partnership",
+    "proposalPlaceholder": "What kind of collaboration would you like to explore with BTIS?",
+    "submit": "Send the proposal",
+    "sending": "Sending",
+    "asideTitle": "How it works",
+    "asideText": "BTIS does not publish an open call. Each partnership is examined on the basis of your proposal.",
+    "investorKicker": "Invest",
+    "investorText": "If you are looking to invest rather than structure an operational partnership, use the investor path.",
+    "investorCta": "Become an investor",
+    "success": "Your partnership proposal has been sent. BTIS will reply to the address you provided.",
+    "errorUnconfigured": "Request delivery is not configured on this server.",
+    "errorSend": "Delivery failed. Please try again in a moment.",
+    "errorInvalid": "Some fields need to be corrected.",
+    "errorRequired": "This field is required.",
+    "errorEmail": "Enter a valid email address.",
+    "errorShort": "Please specify the purpose of the partnership."
+  },
+  "joinInvestor": {
+    "kicker": "Become an investor",
+    "title": "Qualify an investment interest with BTIS.",
+    "intro": "This path is not a subscription. It is used to understand your profile, your interest and the support you expect, before any introduction.",
+    "forTitle": "Who this path is for",
+    "forText": "Investors, family offices, funds, institutions and companies that want to read Burkina Faso — particularly education — before deciding.",
+    "points": [
+      "Market reading",
+      "Opportunity qualification",
+      "Structuring",
+      "Local grounding"
+    ],
+    "marketCta": "Read Investing in Burkina Faso first",
+    "steps": [
+      {
+        "title": "You specify your profile",
+        "text": "Type of investor and sector interest, with no public ticket size and no commitment."
+      },
+      {
+        "title": "BTIS shares a reading",
+        "text": "Context, actors and conditions required — not a brochure with figures."
+      },
+      {
+        "title": "The next step is structured",
+        "text": "If the fit is confirmed, BTIS supports qualification, then possible execution."
+      }
+    ],
+    "formTitle": "Your investment interest",
+    "formNote": "No minimum ticket is published. Qualification comes before any discussion of an operation.",
+    "investorProfile": "Investor profile",
+    "investorProfiles": {
+      "individual": "Individual",
+      "family-office": "Family office",
+      "fund": "Fund",
+      "institution": "Institution",
+      "corporate": "Corporate"
+    },
+    "interest": "Main interest",
+    "interests": {
+      "education": "Education",
+      "mixed": "Several sectors, including education",
+      "explore": "To be defined with BTIS"
+    },
+    "selectPlaceholder": "Select",
+    "lastName": "Last name",
+    "firstName": "First name",
+    "organization": "Organisation",
+    "role": "Role",
+    "email": "Professional email",
+    "country": "Country",
+    "proposal": "Your interest",
+    "proposalPlaceholder": "What kind of investment or support would you like to explore?",
+    "submit": "Qualify my interest",
+    "sending": "Sending",
+    "asideTitle": "What BTIS does not do here",
+    "asideText": "No online fundraising, no return promises, no list of confidential operations.",
+    "partnerKicker": "Partnership",
+    "partnerText": "If you represent an operator, an institution or a local actor, the partner path is a better fit.",
+    "partnerCta": "Become a partner",
+    "success": "Your investment interest has been sent. BTIS will reply to the address you provided.",
+    "errorUnconfigured": "Request delivery is not configured on this server.",
+    "errorSend": "Delivery failed. Please try again in a moment.",
+    "errorInvalid": "Some fields need to be corrected.",
+    "errorRequired": "This field is required.",
+    "errorEmail": "Enter a valid email address.",
+    "errorShort": "Please specify your interest."
   }
 }

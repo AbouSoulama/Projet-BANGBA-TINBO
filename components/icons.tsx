@@ -44,6 +44,24 @@ export function PhoneIcon({ className }: IconProps) {
   );
 }
 
+export function CalendarIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <rect x="3.5" y="5" width="17" height="15.5" rx="1.5" />
+      <path d="M8 3.5V7M16 3.5V7M3.5 10h17" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function VideoIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">
+      <rect x="2.5" y="6" width="13.5" height="12" rx="1.5" />
+      <path d="m16 10 5-2.5v9L16 14" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export function PlusIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={className} aria-hidden="true">

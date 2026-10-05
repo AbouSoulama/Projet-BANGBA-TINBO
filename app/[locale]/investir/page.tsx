@@ -78,7 +78,7 @@ export default async function InvestPage({
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/50 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/85 via-navy-deep/25 to-transparent" />
                   <div className="relative flex min-h-[22rem] flex-col justify-end p-7 text-white">
                     <h3 className="font-display text-3xl">{item.title}</h3>
                     <p className="mt-2 text-white/80">{item.text}</p>
@@ -105,8 +105,8 @@ export default async function InvestPage({
       </section>
 
       <section className="relative overflow-hidden bg-navy-deep text-paper">
-        <Image src={IMAGES.infrastructure} alt="" fill className="object-cover opacity-20" />
-        <div className="absolute inset-0 bg-navy-deep/80" />
+        <Image src={IMAGES.infrastructure} alt="" fill className="object-cover opacity-50" />
+        <div className="absolute inset-0 bg-navy-deep/55" />
         <div className="relative mx-auto max-w-7xl px-6 py-24">
           <h2 className="font-display text-4xl text-white md:text-5xl">{t("roleTitle")}</h2>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-paper/80">{t("roleText")}</p>
@@ -118,8 +118,11 @@ export default async function InvestPage({
               </li>
             ))}
           </ol>
-          <div className="mt-14">
-            <ButtonLink href="/contact?type=investment" variant="gold">
+          <div className="mt-14 flex flex-col gap-4 sm:flex-row">
+            <ButtonLink href="/devenir-investisseur" variant="gold">
+              {t("ctaBecome")}
+            </ButtonLink>
+            <ButtonLink href="/contact?type=investment" variant="ghostLight">
               {t("cta")}
             </ButtonLink>
           </div>

@@ -40,6 +40,7 @@ export default async function HomePage({
   const locale = await resolveLocale(params);
   const t = await getTranslations("home");
   const ui = await getTranslations("ui");
+  const nav = await getTranslations("nav");
   const expertise = t.raw("expertiseItems") as Item[];
   const axes = t.raw("focusAxes") as Item[];
   const proofs = t.raw("whyItems") as Item[];
@@ -113,7 +114,7 @@ export default async function HomePage({
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(min-width: 768px) 50vw, 100vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/55 to-navy-deep/10" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/85 via-navy-deep/25 to-transparent" />
                   <div className="relative flex h-full min-h-[22rem] flex-col justify-end p-8 text-white">
                     <p className="text-xs tracking-[0.22em] text-gold-light">0{index + 1}</p>
                     <h3 className="mt-4 font-display text-3xl">{item.title}</h3>
@@ -131,8 +132,8 @@ export default async function HomePage({
       </section>
 
       <section className="relative overflow-hidden bg-navy-deep text-paper">
-        <Image src={IMAGES.classroom} alt="" fill sizes="100vw" className="object-cover opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/88 to-navy-deep/55" />
+        <Image src={IMAGES.classroom} alt="" fill sizes="100vw" className="object-cover opacity-55" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/80 via-navy-deep/55 to-navy-deep/35" />
         <div className="relative mx-auto max-w-7xl px-6 py-24 lg:py-32">
           <Reveal>
             <p className="eyebrow text-gold-light">{t("focusEyebrow")}</p>
@@ -181,6 +182,46 @@ export default async function HomePage({
               </StaggerItem>
             ))}
           </Stagger>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-navy-deep text-paper">
+        <Image src={IMAGES.boardroom} alt="" fill className="object-cover opacity-45" />
+        <div className="absolute inset-0 bg-navy-deep/55" />
+        <div className="relative mx-auto max-w-7xl px-6 py-24 lg:py-32">
+          <Reveal>
+            <p className="eyebrow text-gold-light">{t("collaborateEyebrow")}</p>
+          </Reveal>
+          <RevealWords text={t("collaborateTitle")} className="mt-5 font-display text-4xl text-white md:text-6xl" />
+          <Reveal delay={0.15}>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-paper/80">{t("collaborateText")}</p>
+          </Reveal>
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            <Link
+              href="/devenir-partenaire"
+              className="group border border-white/15 p-8 transition-colors duration-500 hover:border-gold"
+            >
+              <p className="text-xs tracking-[0.2em] text-gold uppercase">{nav("partners")}</p>
+              <p className="mt-4 font-display text-3xl text-white">{t("collaboratePartner")}</p>
+              <p className="mt-3 leading-7 text-paper/70">{t("collaboratePartnerText")}</p>
+              <span className="mt-6 inline-flex items-center gap-2 text-sm text-gold-light">
+                {ui("discover")}
+                <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </span>
+            </Link>
+            <Link
+              href="/devenir-investisseur"
+              className="group border border-white/15 p-8 transition-colors duration-500 hover:border-gold"
+            >
+              <p className="text-xs tracking-[0.2em] text-gold uppercase">{nav("investShort")}</p>
+              <p className="mt-4 font-display text-3xl text-white">{t("collaborateInvestor")}</p>
+              <p className="mt-3 leading-7 text-paper/70">{t("collaborateInvestorText")}</p>
+              <span className="mt-6 inline-flex items-center gap-2 text-sm text-gold-light">
+                {ui("discover")}
+                <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </span>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -293,7 +334,7 @@ export default async function HomePage({
         title={t("finalTitle")}
         text={t("finalText")}
         cta={t("finalCta")}
-        href="/contact#rendez-vous"
+        href="/rendez-vous"
       />
     </>
   );

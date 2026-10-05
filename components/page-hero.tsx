@@ -18,8 +18,8 @@ export function PageHero({
   return (
     <section className="grain relative flex min-h-[68vh] items-end overflow-hidden bg-navy-deep text-white">
       <Image src={image} alt="" fill priority sizes="100vw" className="object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/92 via-navy-deep/70 to-navy-deep/25" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-navy-deep/40" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-navy-deep/48 via-navy-deep/14 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-deep/50 via-transparent to-transparent" />
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pt-36 pb-20 md:pt-44 md:pb-24">
         {crumbs ? <div className="mb-8 text-white/70">{crumbs}</div> : null}
         <Reveal>

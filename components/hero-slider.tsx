@@ -72,8 +72,8 @@ export function HeroSlider({
         </motion.div>
       </AnimatePresence>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy-deep/70 to-navy-deep/10" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-navy-deep/60" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-navy-deep/45 via-navy-deep/12 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-deep/60 via-transparent to-transparent" />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pt-40 pb-36 md:pb-40">
         <AnimatePresence mode="wait">

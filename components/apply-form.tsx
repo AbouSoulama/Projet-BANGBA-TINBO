@@ -3,18 +3,37 @@
 import { useActionState, useState } from "react";
 import { useTranslations } from "next-intl";
 import { submitContact, type ContactState } from "@/lib/contact";
-import { REQUEST_TYPES, type RequestType } from "@/lib/site";
+import {
+  INVESTOR_INTERESTS,
+  INVESTOR_PROFILES,
+  PARTNER_KINDS,
+  type RequestType,
+} from "@/lib/site";
+
+const EXTRA_OPTIONS = {
+  partnerKind: PARTNER_KINDS,
+  investorProfile: INVESTOR_PROFILES,
+  interest: INVESTOR_INTERESTS,
+} as const;
+
+type ExtraName = keyof typeof EXTRA_OPTIONS;
 
 const initialState: ContactState = { status: "idle" };
 
-export function ContactForm({
+export function ApplyForm({
   locale,
-  defaultType,
+  namespace,
+  requestType,
+  extras,
+  honeypotId,
 }: {
   locale: string;
-  defaultType?: RequestType;
+  namespace: "partners" | "joinInvestor";
+  requestType: RequestType;
+  extras: ExtraName[];
+  honeypotId: string;
 }) {
-  const t = useTranslations("contact");
+  const t = useTranslations(namespace);
   const [state, action, pending] = useActionState(submitContact, initialState);
   const [values, setValues] = useState({
     lastName: "",
@@ -23,8 +42,10 @@ export function ContactForm({
     role: "",
     email: "",
     country: "",
-    requestType: defaultType ?? "",
     message: "",
+    partnerKind: "",
+    investorProfile: "",
+    interest: "",
   });
 
   function update(field: keyof typeof values, value: string) {
@@ -42,9 +63,10 @@ export function ContactForm({
     <form action={action} className="space-y-8" noValidate>
       <input type="hidden" name="locale" value={locale} />
       <input type="hidden" name="intent" value="message" />
+      <input type="hidden" name="requestType" value={requestType} />
       <div className="absolute -left-[9999px] h-px w-px overflow-hidden" aria-hidden="true">
-        <label htmlFor="companyWebsite">Website</label>
-        <input id="companyWebsite" name="companyWebsite" type="text" tabIndex={-1} autoComplete="off" />
+        <label htmlFor={honeypotId}>Website</label>
+        <input id={honeypotId} name="companyWebsite" type="text" tabIndex={-1} autoComplete="off" />
       </div>
 
       {state.status === "success" ? (
@@ -68,9 +90,36 @@ export function ContactForm({
         </p>
       ) : null}
 
+      {extras.map((extra) => (
+        <div key={extra}>
+          <label htmlFor={extra} className="mb-2 block text-sm font-semibold text-navy">
+            {t(extra)}
+          </label>
+          <select
+            id={extra}
+            name={extra}
+            value={values[extra]}
+            onChange={(event) => update(extra, event.target.value)}
+            required
+            aria-invalid={state.fieldErrors?.[extra] ? true : undefined}
+            className="w-full border-0 border-b border-line bg-transparent px-0 py-3 text-ink outline-none transition-colors focus:border-gold"
+          >
+            <option value="" disabled>
+              {t("selectPlaceholder")}
+            </option>
+            {EXTRA_OPTIONS[extra].map((option) => (
+              <option key={option} value={option}>
+                {t(`${extra}s.${option}`)}
+              </option>
+            ))}
+          </select>
+          {state.fieldErrors?.[extra] ? <p className="mt-2 text-sm text-navy">{t("errorRequired")}</p> : null}
+        </div>
+      ))}
+
       <div className="grid gap-5 sm:grid-cols-2">
         <Field
-          id="lastName"
+          id={`${honeypotId}-lastName`}
           name="lastName"
           label={t("lastName")}
           autoComplete="family-name"
@@ -79,7 +128,7 @@ export function ContactForm({
           error={errorText(state.fieldErrors?.lastName)}
         />
         <Field
-          id="firstName"
+          id={`${honeypotId}-firstName`}
           name="firstName"
           label={t("firstName")}
           autoComplete="given-name"
@@ -88,7 +137,7 @@ export function ContactForm({
           error={errorText(state.fieldErrors?.firstName)}
         />
         <Field
-          id="organization"
+          id={`${honeypotId}-organization`}
           name="organization"
           label={t("organization")}
           autoComplete="organization"
@@ -97,7 +146,7 @@ export function ContactForm({
           error={errorText(state.fieldErrors?.organization)}
         />
         <Field
-          id="role"
+          id={`${honeypotId}-role`}
           name="role"
           label={t("role")}
           autoComplete="organization-title"
@@ -106,7 +155,7 @@ export function ContactForm({
           error={errorText(state.fieldErrors?.role)}
         />
         <Field
-          id="email"
+          id={`${honeypotId}-email`}
           name="email"
           type="email"
           label={t("email")}
@@ -116,7 +165,7 @@ export function ContactForm({
           error={errorText(state.fieldErrors?.email)}
         />
         <Field
-          id="country"
+          id={`${honeypotId}-country`}
           name="country"
           label={t("country")}
           autoComplete="country-name"
@@ -127,44 +176,17 @@ export function ContactForm({
       </div>
 
       <div>
-        <label htmlFor="requestType" className="mb-2 block text-sm font-semibold text-navy">
-          {t("requestType")}
-        </label>
-        <select
-          id="requestType"
-          name="requestType"
-          value={values.requestType}
-          onChange={(event) => update("requestType", event.target.value)}
-          required
-          aria-invalid={state.fieldErrors?.requestType ? true : undefined}
-          className="w-full border-0 border-b border-line bg-transparent px-0 py-3 text-ink outline-none transition-colors focus:border-gold"
-        >
-          <option value="" disabled>
-            {t("requestPlaceholder")}
-          </option>
-          {REQUEST_TYPES.map((type) => (
-            <option key={type} value={type}>
-              {type}
-            </option>
-          ))}
-        </select>
-        {state.fieldErrors?.requestType ? (
-          <p className="mt-2 text-sm text-navy">{t("errorRequired")}</p>
-        ) : null}
-      </div>
-
-      <div>
-        <label htmlFor="message" className="mb-2 block text-sm font-semibold text-navy">
-          {t("message")}
+        <label htmlFor={`${honeypotId}-message`} className="mb-2 block text-sm font-semibold text-navy">
+          {t("proposal")}
         </label>
         <textarea
-          id="message"
+          id={`${honeypotId}-message`}
           name="message"
           required
           rows={6}
           value={values.message}
           onChange={(event) => update("message", event.target.value)}
-          placeholder={t("messagePlaceholder")}
+          placeholder={t("proposalPlaceholder")}
           aria-invalid={state.fieldErrors?.message ? true : undefined}
           className="w-full border-0 border-b border-line bg-transparent px-0 py-3 text-ink outline-none transition-colors focus:border-gold"
         />
@@ -176,7 +198,7 @@ export function ContactForm({
       <button
         type="submit"
         disabled={pending}
-        className="bg-navy px-7 py-4 text-sm font-semibold tracking-[0.12em] text-white uppercase transition-colors duration-500 hover:bg-navy-deep disabled:opacity-60"
+        className="bg-gold px-7 py-4 text-sm font-semibold tracking-[0.12em] text-navy-deep uppercase transition-colors duration-500 hover:bg-gold-light disabled:opacity-60"
       >
         {pending ? t("sending") : t("submit")}
       </button>

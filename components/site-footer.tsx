@@ -2,7 +2,7 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { CONTACT } from "@/lib/site";
-import { MailIcon, PhoneIcon } from "./icons";
+import { ArrowRight, MailIcon, PhoneIcon } from "./icons";
 import { LocaleSwitcher } from "./locale-switcher";
 
 const links = [
@@ -10,9 +10,9 @@ const links = [
   { href: "/btis", key: "btis" },
   { href: "/expertises", key: "expertise" },
   { href: "/investir", key: "invest" },
+  { href: "/partenaires", key: "partners" },
   { href: "/operations", key: "operations" },
   { href: "/insights", key: "insights" },
-  { href: "/contact", key: "contact" },
 ] as const;
 
 export async function SiteFooter() {
@@ -24,12 +24,13 @@ export async function SiteFooter() {
 
   return (
     <footer className="bg-navy-deep text-paper">
-      <div className="mx-auto grid max-w-7xl gap-14 px-6 py-20 lg:grid-cols-[1.3fr_0.8fr_1fr]">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <Image src="/brand/logo-light.png" alt={meta("siteName")} width={1219} height={501} className="h-14 w-auto" />
-          <p className="mt-6 max-w-sm text-sm leading-7 text-paper/70">{meta("legalName")}</p>
+          <p className="mt-6 max-w-xs text-sm leading-7 text-paper/70">{meta("legalName")}</p>
           <p className="mt-3 text-xs tracking-[0.2em] text-gold uppercase">{footer("location")}</p>
         </div>
+
         <nav aria-label={t("primary")}>
           <p className="text-xs font-semibold tracking-[0.2em] text-gold uppercase">{footer("navigation")}</p>
           <ul className="mt-5 space-y-2 text-sm">
@@ -42,12 +43,14 @@ export async function SiteFooter() {
             ))}
           </ul>
         </nav>
+
         <div>
           <p className="text-xs font-semibold tracking-[0.2em] text-gold uppercase">{footer("contact")}</p>
+          <p className="mt-5 text-sm leading-6 text-paper/65">{footer("contactText")}</p>
           <ul className="mt-5 space-y-4 text-sm">
             <li>
-              <a href={`mailto:${CONTACT.email}`} className="group flex items-center gap-3 text-paper/85 hover:text-gold-light">
-                <MailIcon className="h-4 w-4 text-gold" />
+              <a href={`mailto:${CONTACT.email}`} className="group flex items-start gap-3 text-paper/85 hover:text-gold-light">
+                <MailIcon className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
                 <span>
                   <span className="block text-[0.65rem] tracking-[0.16em] text-white/40 uppercase">{ui("email")}</span>
                   {CONTACT.email}
@@ -55,8 +58,8 @@ export async function SiteFooter() {
               </a>
             </li>
             <li>
-              <a href={CONTACT.phoneHref} className="group flex items-center gap-3 text-paper/85 hover:text-gold-light">
-                <PhoneIcon className="h-4 w-4 text-gold" />
+              <a href={CONTACT.phoneHref} className="group flex items-start gap-3 text-paper/85 hover:text-gold-light">
+                <PhoneIcon className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
                 <span>
                   <span className="block text-[0.65rem] tracking-[0.16em] text-white/40 uppercase">{ui("phone")}</span>
                   {CONTACT.phone}
@@ -64,7 +67,22 @@ export async function SiteFooter() {
               </a>
             </li>
           </ul>
-          <div className="mt-8">
+          <Link href="/contact" className="mt-6 inline-flex items-center gap-2 text-sm text-gold-light hover:text-gold">
+            {footer("contactCta")}
+            <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
+        </div>
+
+        <div>
+          <p className="text-xs font-semibold tracking-[0.2em] text-gold uppercase">{footer("meeting")}</p>
+          <p className="mt-5 text-sm leading-6 text-paper/65">{footer("meetingText")}</p>
+          <Link
+            href="/rendez-vous"
+            className="mt-6 inline-flex items-center gap-2 border border-gold/60 px-5 py-3 text-[0.68rem] font-semibold tracking-[0.16em] text-gold-light uppercase transition-colors duration-500 hover:bg-gold hover:text-navy-deep"
+          >
+            {footer("meetingCta")}
+          </Link>
+          <div className="mt-10">
             <p className="mb-3 text-xs font-semibold tracking-[0.2em] text-gold uppercase">{footer("language")}</p>
             <LocaleSwitcher tone="dark" />
           </div>

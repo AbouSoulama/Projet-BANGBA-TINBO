@@ -68,7 +68,7 @@ export default async function ExpertisesPage({
           </div>
         </section>
       ))}
-      <CtaBand title={t("ctaTitle")} cta={t("cta")} href="/contact" />
+      <CtaBand title={t("ctaTitle")} cta={t("cta")} href="/rendez-vous" />
     </>
   );
 }

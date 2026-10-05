@@ -10,7 +10,7 @@ export const IMAGES = {
   office: "/images/contact-office.jpg",
 } as const;
 
-export const HERO_SLIDE_IMAGES = [IMAGES.ouaga, IMAGES.campus, IMAGES.boardroom] as const;
+export const HERO_SLIDE_IMAGES = [IMAGES.infrastructure, IMAGES.campus, IMAGES.boardroom] as const;
 
 export const EXPERTISE_IMAGES = [
   IMAGES.desk,

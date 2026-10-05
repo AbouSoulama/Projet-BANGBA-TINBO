@@ -44,7 +44,16 @@ export function SiteHeader({ insights, operations }: Props) {
     };
   }, [open]);
 
-  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    if (href === "/investir") {
+      return pathname.startsWith("/investir") || pathname.startsWith("/devenir-investisseur");
+    }
+    if (href === "/partenaires") {
+      return pathname.startsWith("/partenaires") || pathname.startsWith("/devenir-partenaire");
+    }
+    return pathname.startsWith(href);
+  };
 
   return (
     <header
@@ -53,7 +62,7 @@ export function SiteHeader({ insights, operations }: Props) {
           ? "py-2"
           : scrolled
             ? "bg-navy-deep/90 py-2 shadow-[0_10px_40px_-20px_rgba(0,0,0,0.6)] backdrop-blur-xl"
-            : "bg-gradient-to-b from-navy-deep/70 to-transparent py-5"
+            : "bg-gradient-to-b from-navy-deep/35 to-transparent py-5"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6">
@@ -101,8 +110,12 @@ export function SiteHeader({ insights, operations }: Props) {
         <div className="hidden items-center gap-6 lg:flex">
           <LocaleSwitcher tone="dark" />
           <Link
-            href="/contact#rendez-vous"
-            className="group inline-flex items-center gap-2 border border-gold/60 px-5 py-3 text-[0.68rem] font-semibold tracking-[0.16em] text-gold-light uppercase transition-colors duration-500 hover:bg-gold hover:text-navy-deep"
+            href="/rendez-vous"
+            className={`group inline-flex items-center gap-2 border px-5 py-3 text-[0.68rem] font-semibold tracking-[0.16em] uppercase transition-colors duration-500 ${
+              pathname.startsWith("/rendez-vous")
+                ? "border-gold bg-gold text-navy-deep"
+                : "border-gold/60 text-gold-light hover:bg-gold hover:text-navy-deep"
+            }`}
           >
             {t("meeting")}
           </Link>
@@ -174,7 +187,7 @@ export function SiteHeader({ insights, operations }: Props) {
                 <div className="flex items-center justify-between pt-4">
                   <LocaleSwitcher tone="dark" />
                   <Link
-                    href="/contact#rendez-vous"
+                    href="/rendez-vous"
                     className="bg-gold px-5 py-3 text-xs font-semibold tracking-[0.14em] text-navy-deep uppercase"
                   >
                     {t("meeting")}
@@ -195,7 +208,6 @@ function useNavGroups(insights: NavLink[], operations: NavLink[]): NavGroup[] {
   const expertiseItems = expertises.raw("items") as { id: string; title: string }[];
 
   return [
-    { id: "home", href: "/", label: t("home"), children: [] },
     {
       id: "btis",
       href: "/btis",
@@ -219,15 +231,17 @@ function useNavGroups(insights: NavLink[], operations: NavLink[]): NavGroup[] {
         { href: "/investir#education", label: t("investEducation") },
         { href: "/investir#opportunites", label: t("investOpportunities") },
         { href: "/investir#marche", label: t("investMarket") },
+        { href: "/devenir-investisseur", label: t("becomeInvestor") },
       ],
+    },
+    {
+      id: "partners",
+      href: "/partenaires",
+      label: t("partners"),
+      children: [{ href: "/devenir-partenaire", label: t("becomePartner") }],
     },
     { id: "operations", href: "/operations", label: t("operationsShort"), children: operations },
     { id: "insights", href: "/insights", label: t("insights"), children: insights },
-    {
-      id: "contact",
-      href: "/contact",
-      label: t("contact"),
-      children: [{ href: "/contact#rendez-vous", label: t("meeting") }],
-    },
+    { id: "contact", href: "/contact", label: t("contact"), children: [] },
   ];
 }

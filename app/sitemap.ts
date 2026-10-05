@@ -3,7 +3,19 @@ import { routing } from "@/i18n/routing";
 import { getInsights, getOperations } from "@/lib/content";
 import { siteUrl } from "@/lib/site";
 
-const paths = ["", "/btis", "/expertises", "/investir", "/operations", "/insights", "/contact"];
+const paths = [
+  "",
+  "/btis",
+  "/expertises",
+  "/investir",
+  "/devenir-investisseur",
+  "/partenaires",
+  "/devenir-partenaire",
+  "/operations",
+  "/insights",
+  "/contact",
+  "/rendez-vous",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteUrl();

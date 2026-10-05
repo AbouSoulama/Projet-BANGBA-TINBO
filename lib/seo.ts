@@ -17,7 +17,15 @@ type MetaKey =
   | "insightsTitle"
   | "insightsDescription"
   | "contactTitle"
-  | "contactDescription";
+  | "contactDescription"
+  | "meetingTitle"
+  | "meetingDescription"
+  | "partnersTitle"
+  | "partnersDescription"
+  | "becomePartnerTitle"
+  | "becomePartnerDescription"
+  | "becomeInvestorTitle"
+  | "becomeInvestorDescription";
 
 export async function buildMetadata(
   locale: string,

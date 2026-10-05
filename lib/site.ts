@@ -3,7 +3,7 @@ export function siteUrl() {
 }
 
 export const CONTACT = {
-  email: "bangbatinbo@gmail.com",
+  email: "tinbobangba@gmail.com",
   phone: "+33 7 55 82 16 84",
   phoneHref: "tel:+33755821684",
 } as const;
@@ -28,6 +28,21 @@ export const REQUEST_TYPES = [
 ] as const;
 
 export type RequestType = (typeof REQUEST_TYPES)[number];
+
+export const MEETING_FORMATS = ["visio", "phone", "in-person"] as const;
+export type MeetingFormat = (typeof MEETING_FORMATS)[number];
+
+export const MEETING_PERIODS = ["this-week", "two-weeks", "month", "flexible"] as const;
+export type MeetingPeriod = (typeof MEETING_PERIODS)[number];
+
+export const PARTNER_KINDS = ["institution", "operator", "education", "investor", "local", "other"] as const;
+export type PartnerKind = (typeof PARTNER_KINDS)[number];
+
+export const INVESTOR_PROFILES = ["individual", "family-office", "fund", "institution", "corporate"] as const;
+export type InvestorProfile = (typeof INVESTOR_PROFILES)[number];
+
+export const INVESTOR_INTERESTS = ["education", "mixed", "explore"] as const;
+export type InvestorInterest = (typeof INVESTOR_INTERESTS)[number];
 
 export const REQUEST_TYPE_PARAMS: Record<string, RequestType> = {
   investment: "Investment opportunity",
