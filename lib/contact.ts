@@ -1,10 +1,9 @@
 "use server";
 
-import nodemailer from "nodemailer";
 import { z } from "zod";
 import { insertLead, mysqlConfigured } from "./db";
+import { deliverFormEmails, smtpConfigured, type MailKind, type MailRow } from "./mail";
 import {
-  CONTACT,
   INVESTOR_INTERESTS,
   INVESTOR_PROFILES,
   MEETING_FORMATS,
@@ -90,14 +89,19 @@ const INTEREST_LABEL = {
   explore: { fr: "À préciser avec BTIS", en: "To be defined with BTIS" },
 } as const;
 
+const REQUEST_LABEL = {
+  "Investment opportunity": { fr: "Opportunité d’investissement", en: "Investment opportunity" },
+  "Strategic advisory": { fr: "Conseil stratégique", en: "Strategic advisory" },
+  "Market intelligence": { fr: "Intelligence économique", en: "Market intelligence" },
+  Partnership: { fr: "Partenariat", en: "Partnership" },
+  "Education project": { fr: "Projet éducatif", en: "Education project" },
+  Other: { fr: "Autre", en: "Other" },
+} as const;
+
 function fieldCode(field: string, code: string): "required" | "email" | "short" {
   if (field === "email" && code !== "too_small") return "email";
   if (field === "message" && code === "too_small") return "short";
   return "required";
-}
-
-function smtpConfigured() {
-  return Boolean(process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS);
 }
 
 function asOptionalEnum(value: FormDataEntryValue | null) {
@@ -201,19 +205,9 @@ export async function submitContact(_prev: ContactState, formData: FormData): Pr
   ];
   const storedMessage = extraNote.length > 0 ? `${extraNote.join("\n")}\n\n${data.message}` : data.message;
 
-  const canStore = mysqlConfigured();
-  const canMail = smtpConfigured();
-
-  if (!canStore && !canMail) {
-    return { status: "error", error: "unconfigured", intent: data.intent };
-  }
-
-  let stored = false;
-  let mailed = false;
-
-  if (canStore) {
+  if (mysqlConfigured()) {
     try {
-      stored = await insertLead({
+      await insertLead({
         locale: data.locale,
         intent: data.intent,
         lastName: data.lastName,
@@ -230,58 +224,44 @@ export async function submitContact(_prev: ContactState, formData: FormData): Pr
     }
   }
 
-  if (canMail) {
-    const port = Number(process.env.SMTP_PORT ?? 587);
-    const subject = data.partnerKind
-      ? `Partenariat — ${data.organization}`
-      : data.investorProfile
-        ? `Investisseur — ${data.organization}`
-        : data.intent === "meeting"
-          ? `Rendez-vous — ${data.requestType} — ${data.organization}`
-          : `Demande — ${data.requestType} — ${data.organization}`;
-    const text = [
-      `Intent: ${data.partnerKind ? "Partenariat" : data.investorProfile ? "Investisseur" : data.intent === "meeting" ? "Rendez-vous" : "Message"}`,
-      `Locale: ${data.locale}`,
-      `Nom: ${data.lastName}`,
-      `Prénom: ${data.firstName}`,
-      `Organisation: ${data.organization}`,
-      `Fonction: ${data.role}`,
-      `Email: ${data.email}`,
-      `Pays: ${data.country}`,
-      `Type de demande: ${data.requestType}`,
-      ...(data.format ? [`Format: ${FORMAT_LABEL[data.format][locale]}`] : []),
-      ...(data.period ? [`Période souhaitée: ${PERIOD_LABEL[data.period][locale]}`] : []),
-      ...(data.partnerKind ? [`Profil partenaire: ${PARTNER_KIND_LABEL[data.partnerKind][locale]}`] : []),
-      ...(data.investorProfile ? [`Profil investisseur: ${INVESTOR_PROFILE_LABEL[data.investorProfile][locale]}`] : []),
-      ...(data.interest ? [`Intérêt: ${INTEREST_LABEL[data.interest][locale]}`] : []),
-      "",
-      data.message,
-    ].join("\n");
+  const labels = locale === "fr"
+    ? { name: "Nom", first: "Prénom", organization: "Organisation", role: "Fonction", email: "Email", country: "Pays", type: "Type de demande", format: "Format", period: "Période souhaitée", partner: "Profil partenaire", investor: "Profil investisseur", interest: "Intérêt" }
+    : { name: "Last name", first: "First name", organization: "Organization", role: "Role", email: "Email", country: "Country", type: "Request type", format: "Format", period: "Preferred period", partner: "Partner profile", investor: "Investor profile", interest: "Interest" };
 
-    try {
-      const transporter = nodemailer.createTransport({
-        host: process.env.SMTP_HOST,
-        port,
-        secure: port === 465,
-        auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
-      });
+  const rows: MailRow[] = [
+    { label: labels.name, value: data.lastName },
+    { label: labels.first, value: data.firstName },
+    { label: labels.organization, value: data.organization },
+    { label: labels.role, value: data.role },
+    { label: labels.email, value: data.email },
+    { label: labels.country, value: data.country },
+    { label: labels.type, value: REQUEST_LABEL[data.requestType][locale] },
+    ...(data.format ? [{ label: labels.format, value: FORMAT_LABEL[data.format][locale] }] : []),
+    ...(data.period ? [{ label: labels.period, value: PERIOD_LABEL[data.period][locale] }] : []),
+    ...(data.partnerKind ? [{ label: labels.partner, value: PARTNER_KIND_LABEL[data.partnerKind][locale] }] : []),
+    ...(data.investorProfile ? [{ label: labels.investor, value: INVESTOR_PROFILE_LABEL[data.investorProfile][locale] }] : []),
+    ...(data.interest ? [{ label: labels.interest, value: INTEREST_LABEL[data.interest][locale] }] : []),
+  ];
 
-      await transporter.sendMail({
-        from: process.env.SMTP_FROM || process.env.SMTP_USER,
-        to: process.env.CONTACT_TO || CONTACT.email,
-        replyTo: data.email,
-        subject,
-        text,
-      });
-      mailed = true;
-    } catch (error) {
-      console.error("Contact form delivery failed", error);
-    }
+  const kind: MailKind = data.partnerKind ? "partner" : data.investorProfile ? "investor" : data.intent === "meeting" ? "meeting" : "message";
+
+  if (!smtpConfigured()) {
+    return { status: "error", error: "unconfigured", intent: data.intent };
   }
 
-  if (stored || mailed) {
+  const delivered = await deliverFormEmails({
+    locale,
+    kind,
+    visitorName: `${data.firstName} ${data.lastName}`,
+    visitorEmail: data.email,
+    organization: data.organization,
+    rows,
+    message: data.message,
+  });
+
+  if (delivered === "ok") {
     return { status: "success", intent: data.intent };
   }
 
-  return { status: "error", error: "send", intent: data.intent };
+  return { status: "error", error: delivered === "unconfigured" ? "unconfigured" : "send", intent: data.intent };
 }

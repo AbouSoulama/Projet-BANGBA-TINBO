@@ -88,9 +88,14 @@ MYSQL_USER=...
 MYSQL_PASSWORD=...
 MYSQL_DATABASE=...
 CONTACT_TO=tinbobangba@gmail.com
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=465
+SMTP_USER=tinbobangba@gmail.com
+SMTP_PASS=mot-de-passe-application-google
+SMTP_FROM=tinbobangba@gmail.com
 ```
 
-SMTP (optionnel) : `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `SMTP_FROM`.
+Les formulaires envoient deux e-mails : un à `CONTACT_TO`, et un accusé à la personne qui a écrit. Sans `SMTP_HOST`, `SMTP_USER` et `SMTP_PASS`, l’envoi est refusé. Pour Gmail, le mot de passe est un mot de passe d’application, pas le mot de passe du compte.
 
 `NEXT_PUBLIC_SITE_URL` est lu au **build**. Après l’avoir définie, lancez un **nouveau build**.
 
