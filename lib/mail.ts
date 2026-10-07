@@ -122,12 +122,16 @@ function textBlock(value: string) {
   return esc(value).replace(/\n/g, "<br>");
 }
 
+function smtpUser() {
+  return process.env.SMTP_USER || process.env.SMPT_USER || "";
+}
+
 export function smtpConfigured() {
-  return Boolean(process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS);
+  return Boolean(process.env.SMTP_HOST && smtpUser() && process.env.SMTP_PASS);
 }
 
 function fromAddress() {
-  const raw = process.env.SMTP_FROM || process.env.SMTP_USER || CONTACT.email;
+  const raw = process.env.SMTP_FROM || smtpUser() || CONTACT.email;
   if (raw.includes("<")) return raw;
   return `BTIS <${raw}>`;
 }
@@ -247,7 +251,7 @@ export async function deliverFormEmails(mail: FormMail) {
     host: process.env.SMTP_HOST,
     port,
     secure: port === 465,
-    auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+    auth: { user: smtpUser(), pass: process.env.SMTP_PASS },
     connectionTimeout: 12_000,
     greetingTimeout: 12_000,
     socketTimeout: 20_000,
