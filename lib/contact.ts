@@ -20,7 +20,7 @@ const schema = z.object({
   email: z.string().trim().max(160).regex(/^[^\s@]+@[^\s@]+\.[^\s@]+$/),
   country: z.string().trim().min(1).max(80),
   requestType: z.enum(REQUEST_TYPES),
-  message: z.string().trim().min(10).max(4000),
+  message: z.string().trim().min(1).max(4000),
   intent: z.enum(["message", "meeting"]),
   locale: z.enum(["fr", "en"]),
   format: z.enum(MEETING_FORMATS).optional(),

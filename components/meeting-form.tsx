@@ -72,8 +72,12 @@ export function MeetingForm({
         </p>
       ) : null}
       {state.status === "error" && state.error === "invalid" ? (
-        <p role="alert" className="border border-navy/20 bg-white px-4 py-3 text-navy">
-          {t("errorInvalid")}
+        <p role="alert" className="border border-gold bg-white px-4 py-3 text-navy">
+          {t("errorInvalid")}{" "}
+          {Object.keys(state.fieldErrors ?? {})
+            .map((field) => (field === "message" ? t("objective") : field === "requestType" ? t("requestType") : field === "format" ? t("format") : field === "period" ? t("period") : t(field as "lastName")))
+            .join(", ")}
+          .
         </p>
       ) : null}
 
@@ -208,7 +212,7 @@ export function MeetingForm({
           </option>
           {REQUEST_TYPES.map((type) => (
             <option key={type} value={type}>
-              {type}
+              {t(`requestTypes.${type}`)}
             </option>
           ))}
         </select>

@@ -63,8 +63,18 @@ export function ContactForm({
         </p>
       ) : null}
       {state.status === "error" && state.error === "invalid" ? (
-        <p role="alert" className="border border-navy/20 bg-white px-4 py-3 text-navy">
-          {t("errorInvalid")}
+        <p role="alert" className="border border-gold bg-white px-4 py-3 text-navy">
+          {t("errorInvalid")}{" "}
+          {Object.keys(state.fieldErrors ?? {})
+            .map((field) =>
+              field === "message"
+                ? t("message")
+                : field === "requestType"
+                  ? t("requestType")
+                  : t(field as "lastName"),
+            )
+            .join(", ")}
+          .
         </p>
       ) : null}
 
@@ -144,7 +154,7 @@ export function ContactForm({
           </option>
           {REQUEST_TYPES.map((type) => (
             <option key={type} value={type}>
-              {type}
+              {t(`requestTypes.${type}`)}
             </option>
           ))}
         </select>

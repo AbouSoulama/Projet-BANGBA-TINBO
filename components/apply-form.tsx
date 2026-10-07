@@ -85,8 +85,12 @@ export function ApplyForm({
         </p>
       ) : null}
       {state.status === "error" && state.error === "invalid" ? (
-        <p role="alert" className="border border-navy/20 bg-white px-4 py-3 text-navy">
-          {t("errorInvalid")}
+        <p role="alert" className="border border-gold bg-white px-4 py-3 text-navy">
+          {t("errorInvalid")}{" "}
+          {Object.keys(state.fieldErrors ?? {})
+            .map((field) => (field === "message" ? t("proposal") : t(field as "lastName")))
+            .join(", ")}
+          .
         </p>
       ) : null}
 

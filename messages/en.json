@@ -395,6 +395,14 @@
     "country": "Country",
     "requestType": "Request type",
     "requestPlaceholder": "Select",
+    "requestTypes": {
+      "Investment opportunity": "Investment opportunity",
+      "Strategic advisory": "Strategic advisory",
+      "Market intelligence": "Market intelligence",
+      "Partnership": "Partnership",
+      "Education project": "Education project",
+      "Other": "Other"
+    },
     "message": "Message",
     "messagePlaceholder": "Briefly describe your project or your need.",
     "submit": "Send the message",
@@ -410,7 +418,7 @@
     "success": "Your message has been sent. BTIS will reply to the address you provided.",
     "errorUnconfigured": "Request delivery is not configured on this server.",
     "errorSend": "Delivery failed. Please try again in a moment.",
-    "errorInvalid": "Some fields need to be corrected.",
+    "errorInvalid": "Complete these fields:",
     "errorRequired": "This field is required.",
     "errorEmail": "Enter a valid email address.",
     "errorShort": "Briefly describe your project or your need."
@@ -457,6 +465,14 @@
     "country": "Country",
     "requestType": "Purpose of the meeting",
     "requestPlaceholder": "Select",
+    "requestTypes": {
+      "Investment opportunity": "Investment opportunity",
+      "Strategic advisory": "Strategic advisory",
+      "Market intelligence": "Market intelligence",
+      "Partnership": "Partnership",
+      "Education project": "Education project",
+      "Other": "Other"
+    },
     "objective": "Objective of the conversation",
     "objectivePlaceholder": "What would you like to discuss in this meeting?",
     "submit": "Request a meeting",
@@ -469,7 +485,7 @@
     "success": "Your meeting request has been sent. BTIS will propose a time by email.",
     "errorUnconfigured": "Request delivery is not configured on this server.",
     "errorSend": "Delivery failed. Please try again in a moment.",
-    "errorInvalid": "Some fields need to be corrected.",
+    "errorInvalid": "Complete these fields:",
     "errorRequired": "This field is required.",
     "errorEmail": "Enter a valid email address.",
     "errorShort": "Please specify the objective of the conversation."
@@ -569,7 +585,7 @@
     "success": "Your partnership proposal has been sent. BTIS will reply to the address you provided.",
     "errorUnconfigured": "Request delivery is not configured on this server.",
     "errorSend": "Delivery failed. Please try again in a moment.",
-    "errorInvalid": "Some fields need to be corrected.",
+    "errorInvalid": "Complete these fields:",
     "errorRequired": "This field is required.",
     "errorEmail": "Enter a valid email address.",
     "errorShort": "Please specify the purpose of the partnership."
@@ -636,7 +652,7 @@
     "success": "Your investment interest has been sent. BTIS will reply to the address you provided.",
     "errorUnconfigured": "Request delivery is not configured on this server.",
     "errorSend": "Delivery failed. Please try again in a moment.",
-    "errorInvalid": "Some fields need to be corrected.",
+    "errorInvalid": "Complete these fields:",
     "errorRequired": "This field is required.",
     "errorEmail": "Enter a valid email address.",
     "errorShort": "Please specify your interest."

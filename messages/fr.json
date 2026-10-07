@@ -395,6 +395,14 @@
     "country": "Pays",
     "requestType": "Type de demande",
     "requestPlaceholder": "Choisir",
+    "requestTypes": {
+      "Investment opportunity": "Opportunité d’investissement",
+      "Strategic advisory": "Conseil stratégique",
+      "Market intelligence": "Intelligence économique",
+      "Partnership": "Partenariat",
+      "Education project": "Projet éducatif",
+      "Other": "Autre"
+    },
     "message": "Message",
     "messagePlaceholder": "Décrivez brièvement votre projet ou votre besoin.",
     "submit": "Envoyer le message",
@@ -410,7 +418,7 @@
     "success": "Votre message a été envoyé. BTIS vous répondra à l’adresse indiquée.",
     "errorUnconfigured": "L’envoi des demandes n’est pas configuré sur ce serveur.",
     "errorSend": "L’envoi a échoué. Veuillez réessayer dans un instant.",
-    "errorInvalid": "Certains champs doivent être corrigés.",
+    "errorInvalid": "Complétez les champs suivants :",
     "errorRequired": "Ce champ est requis.",
     "errorEmail": "Indiquez un email valide.",
     "errorShort": "Décrivez brièvement votre projet ou votre besoin."
@@ -457,6 +465,14 @@
     "country": "Pays",
     "requestType": "Objet du rendez-vous",
     "requestPlaceholder": "Choisir",
+    "requestTypes": {
+      "Investment opportunity": "Opportunité d’investissement",
+      "Strategic advisory": "Conseil stratégique",
+      "Market intelligence": "Intelligence économique",
+      "Partnership": "Partenariat",
+      "Education project": "Projet éducatif",
+      "Other": "Autre"
+    },
     "objective": "Objectif de l’échange",
     "objectivePlaceholder": "Que souhaitez-vous aborder lors de ce rendez-vous ?",
     "submit": "Demander un rendez-vous",
@@ -469,7 +485,7 @@
     "success": "Votre demande de rendez-vous a été envoyée. BTIS vous proposera un créneau par e-mail.",
     "errorUnconfigured": "L’envoi des demandes n’est pas configuré sur ce serveur.",
     "errorSend": "L’envoi a échoué. Veuillez réessayer dans un instant.",
-    "errorInvalid": "Certains champs doivent être corrigés.",
+    "errorInvalid": "Complétez les champs suivants :",
     "errorRequired": "Ce champ est requis.",
     "errorEmail": "Indiquez un email valide.",
     "errorShort": "Précisez l’objectif de l’échange."
@@ -569,7 +585,7 @@
     "success": "Votre proposition de partenariat a été envoyée. BTIS vous répondra à l’adresse indiquée.",
     "errorUnconfigured": "L’envoi des demandes n’est pas configuré sur ce serveur.",
     "errorSend": "L’envoi a échoué. Veuillez réessayer dans un instant.",
-    "errorInvalid": "Certains champs doivent être corrigés.",
+    "errorInvalid": "Complétez les champs suivants :",
     "errorRequired": "Ce champ est requis.",
     "errorEmail": "Indiquez un email valide.",
     "errorShort": "Précisez l’objet du partenariat."
@@ -636,7 +652,7 @@
     "success": "Votre intérêt d’investissement a été envoyé. BTIS vous répondra à l’adresse indiquée.",
     "errorUnconfigured": "L’envoi des demandes n’est pas configuré sur ce serveur.",
     "errorSend": "L’envoi a échoué. Veuillez réessayer dans un instant.",
-    "errorInvalid": "Certains champs doivent être corrigés.",
+    "errorInvalid": "Complétez les champs suivants :",
     "errorRequired": "Ce champ est requis.",
     "errorEmail": "Indiquez un email valide.",
     "errorShort": "Précisez votre intérêt."
